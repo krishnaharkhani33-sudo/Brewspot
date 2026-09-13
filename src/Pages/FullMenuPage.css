@@ -1,0 +1,500 @@
+.brewspot-menu-list-page {
+  --menu-bg: #faf7f3;
+  --menu-text: #30251f;
+  --menu-muted: #786a61;
+  --menu-brown: #563921;
+  --menu-gold: #b98b54;
+  min-height: 100vh;
+  background: var(--menu-bg);
+  color: var(--menu-text);
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.brewspot-menu-intro {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  padding: 110px 20px 90px;
+  background:
+    linear-gradient(
+      rgba(48, 37, 31, 0.78),
+      rgba(48, 37, 31, 0.84)
+    ),
+    url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1800&q=90")
+    center / cover no-repeat;
+}
+.brewspot-menu-intro-inner {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.menu-kicker {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #d6a15d;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+.brewspot-menu-intro h1 {
+  margin: 0;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -3px;
+}
+.brewspot-menu-intro p {
+  max-width: 620px;
+  margin: 28px auto 0;
+  color: rgba(255,255,255,0.82);
+  font-size: 15px;
+  line-height: 1.8;
+}
+.brewspot-menu-category-bar {
+  position: sticky;
+  top: 72px;
+  z-index: 20;
+  background: rgba(250,247,243,0.96);
+  backdrop-filter: blur(14px);
+}
+.brewspot-menu-category-links {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.brewspot-menu-category-links::-webkit-scrollbar {
+  display: none;
+}
+.brewspot-menu-category-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  padding: 22px 28px;
+  color: var(--menu-muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.25s ease, background 0.25s ease;
+}
+.brewspot-menu-category-links a:hover {
+  color: var(--menu-brown);
+  background: rgba(86,57,33,0.04);
+}
+.brewspot-menu-category-links a span {
+  color: var(--menu-brown);
+  font-size: 9px;
+}
+.brewspot-menu-list-content {
+  padding: 100px 0 110px;
+}
+.brewspot-menu-list-section {
+  margin-bottom: 95px;
+}
+.brewspot-menu-section-header {
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  gap: 25px;
+  align-items: start;
+  margin-bottom: 38px;
+}
+.brewspot-menu-section-number {
+  padding-top: 7px;
+  color: var(--menu-gold);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.brewspot-menu-section-title span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--menu-muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+.brewspot-menu-section-title h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--menu-text);
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+}
+.brewspot-menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.brewspot-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  min-height: 110px;
+  padding: 18px 18px;
+  border-radius: 4px;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+.brewspot-menu-item:hover {
+  background: rgba(86,57,33,0.045);
+  transform: translateX(5px);
+}
+.brewspot-menu-item-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+  flex: 1;
+}
+.brewspot-menu-item-number {
+  min-width: 27px;
+  color: var(--menu-gold);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.brewspot-menu-item-image {
+  width: 74px;
+  height: 74px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #e7ddd2;
+}
+.brewspot-menu-item-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.brewspot-menu-item:hover .brewspot-menu-item-image img {
+  transform: scale(1.08);
+}
+.brewspot-menu-item-info {
+  min-width: 0;
+}
+.brewspot-menu-item-title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.brewspot-menu-item-title-row h3 {
+  margin: 0;
+  color: var(--menu-text);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.brewspot-menu-item-info p {
+  max-width: 650px;
+  margin: 7px 0 0;
+  color: var(--menu-muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+.brewspot-menu-featured {
+  display: inline-flex;
+  padding: 5px 8px;
+  color: var(--menu-gold);
+  border: 1px solid rgba(185,139,84,0.45);
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+.brewspot-menu-item-right {
+  flex-shrink: 0;
+  min-width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.brewspot-menu-item-right strong {
+  color: var(--menu-brown);
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.brewspot-menu-item-featured {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.brewspot-menu-item-featured .brewspot-menu-item-image {
+  width: 82px;
+  height: 82px;
+}
+.brewspot-menu-item-featured .brewspot-menu-item-title-row h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+}
+.brewspot-menu-item-featured .brewspot-menu-item-right strong {
+  color: var(--menu-gold);
+  font-size: 17px;
+}
+.brewspot-menu-note {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 35px;
+  max-width: 900px;
+  margin-top: 70px;
+}
+.brewspot-menu-note span {
+  color: var(--menu-brown);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.brewspot-menu-note p {
+  margin: 0;
+  max-width: 600px;
+  color: var(--menu-muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+body.brewspot-dark .brewspot-menu-list-page {
+  --menu-bg: #17110d;
+  --menu-text: #f1e9e1;
+  --menu-muted: #b7a79b;
+  --menu-brown: #d6a15d;
+  --menu-gold: #d6a15d;
+  background: var(--menu-bg);
+  color: var(--menu-text);
+}
+body.brewspot-dark .brewspot-menu-category-bar {
+  background: rgba(23,17,13,0.96);
+}
+body.brewspot-dark .brewspot-menu-category-links a:hover {
+  background: rgba(214,161,93,0.06);
+}
+body.brewspot-dark .brewspot-menu-item:hover {
+  background: rgba(214,161,93,0.045);
+}
+body.brewspot-dark .brewspot-menu-item-image {
+  background: #251b15;
+}
+body.brewspot-dark .brewspot-menu-item-title-row h3 {
+  color: #f1e9e1;
+}
+@media (max-width:1199px) {
+  .brewspot-menu-intro {
+    min-height: 450px;
+  }
+  .brewspot-menu-list-content {
+    padding: 85px 0 95px;
+  }
+  .brewspot-menu-list-section {
+    margin-bottom: 80px;
+  }
+  .brewspot-menu-item {
+    gap: 25px;
+  }
+  .brewspot-menu-item-right {
+    min-width: 65px;
+  }
+}
+@media (max-width:991px) {
+  .brewspot-menu-category-bar {
+    top: 68px;
+  }
+  .brewspot-menu-category-links a {
+    padding: 18px 21px;
+    font-size: 10px;
+  }
+  .brewspot-menu-section-header {
+    grid-template-columns: 55px 1fr;
+    gap: 18px;
+  }
+  .brewspot-menu-item-image {
+    width: 66px;
+    height: 66px;
+  }
+}
+@media (max-width:767px) {
+  .brewspot-menu-intro {
+    min-height: 390px;
+    padding: 85px 20px 70px;
+  }
+  .menu-kicker {
+    margin-bottom: 17px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+  .brewspot-menu-intro h1 {
+    font-size: clamp(42px,11vw,58px);
+    letter-spacing: -2px;
+  }
+  .brewspot-menu-intro p {
+    margin-top: 22px;
+    font-size: 13px;
+    line-height: 1.75;
+  }
+  .brewspot-menu-category-bar {
+    top: 62px;
+  }
+  .brewspot-menu-category-links a {
+    padding: 16px 17px;
+  }
+  .brewspot-menu-list-content {
+    padding: 65px 0 75px;
+  }
+  .brewspot-menu-list-section {
+    margin-bottom: 65px;
+  }
+  .brewspot-menu-section-header {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+  .brewspot-menu-section-number {
+    padding-top: 0;
+  }
+  .brewspot-menu-section-title h2 {
+    font-size: 34px;
+  }
+  .brewspot-menu-item {
+    align-items: flex-start;
+    gap: 15px;
+    min-height: auto;
+    padding: 17px 0;
+  }
+  .brewspot-menu-item:hover {
+    transform: none;
+  }
+  .brewspot-menu-item-left {
+    align-items: flex-start;
+    gap: 11px;
+  }
+  .brewspot-menu-item-number {
+    min-width: 20px;
+    padding-top: 5px;
+  }
+  .brewspot-menu-item-image {
+    width: 60px;
+    height: 60px;
+  }
+  .brewspot-menu-item-info {
+    flex: 1;
+  }
+  .brewspot-menu-item-title-row h3 {
+    font-size: 16px;
+  }
+  .brewspot-menu-item-featured .brewspot-menu-item-title-row h3 {
+    font-size: 19px;
+  }
+  .brewspot-menu-item-info p {
+    font-size: 10.5px;
+    line-height: 1.6;
+  }
+  .brewspot-menu-item-right {
+    min-width: 50px;
+    padding-top: 5px;
+  }
+  .brewspot-menu-item-right strong {
+    font-size: 13px;
+  }
+  .brewspot-menu-item-featured {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+  .brewspot-menu-item-featured .brewspot-menu-item-image {
+    width: 68px;
+    height: 68px;
+  }
+  .brewspot-menu-note {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 55px;
+  }
+}
+@media (max-width:575px) {
+  .brewspot-menu-intro {
+    min-height: 350px;
+    padding: 72px 18px 60px;
+  }
+  .brewspot-menu-intro h1 {
+    font-size: 39px;
+    line-height: 1.02;
+  }
+  .brewspot-menu-intro p {
+    font-size: 12px;
+  }
+  .brewspot-menu-category-links a {
+    padding: 14px 14px;
+    font-size: 9px;
+  }
+  .brewspot-menu-list-content {
+    padding: 55px 0 65px;
+  }
+  .brewspot-menu-section-title h2 {
+    font-size: 30px;
+  }
+  .brewspot-menu-item-left {
+    gap: 9px;
+  }
+  .brewspot-menu-item-number {
+    display: none;
+  }
+  .brewspot-menu-item-image {
+    width: 55px;
+    height: 55px;
+  }
+  .brewspot-menu-item-title-row h3 {
+    font-size: 15px;
+  }
+  .brewspot-menu-item-featured .brewspot-menu-item-title-row h3 {
+    font-size: 18px;
+  }
+  .brewspot-menu-item-info p {
+    font-size: 10px;
+  }
+  .brewspot-menu-item-right {
+    min-width: 45px;
+  }
+  .brewspot-menu-item-right strong {
+    font-size: 12px;
+  }
+  .brewspot-menu-item-featured .brewspot-menu-item-image {
+    width: 62px;
+    height: 62px;
+  }
+  .brewspot-menu-note p {
+    font-size: 11px;
+  }
+}
+@media (max-width:380px) {
+  .brewspot-menu-intro {
+    min-height: 320px;
+  }
+  .brewspot-menu-intro h1 {
+    font-size: 34px;
+  }
+  .brewspot-menu-section-title h2 {
+    font-size: 27px;
+  }
+  .brewspot-menu-item-image {
+    width: 50px;
+    height: 50px;
+  }
+  .brewspot-menu-item-title-row h3 {
+    font-size: 14px;
+  }
+  .brewspot-menu-item-featured .brewspot-menu-item-image {
+    width: 57px;
+    height: 57px;
+  }
+  .brewspot-menu-item-right {
+    min-width: 40px;
+  }
+  .brewspot-menu-item-right strong {
+    font-size: 11px;
+  }
+}

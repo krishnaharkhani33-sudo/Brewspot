@@ -1,0 +1,1394 @@
+/* =========================================================
+   BREWSPOT FOOD PAGE
+========================================================= */
+
+.brewspot-food-page {
+  --food-bg: #faf7f3;
+  --food-section: #f3eee8;
+  --food-card: #ffffff;
+  --food-text: #30251f;
+  --food-muted: #766a61;
+  --food-brown: #563921;
+  --food-gold: #d6a15d;
+  --food-border: rgba(86, 57, 33, 0.14);
+
+  background: var(--food-bg);
+  color: var(--food-text);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.brewspot-food-hero {
+  position: relative;
+
+  min-height: 640px;
+
+  padding: 100px 8%;
+
+  display: flex;
+  align-items: center;
+
+  isolation: isolate;
+
+  overflow: hidden;
+
+  color: #ffffff;
+}
+
+.brewspot-food-hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: -2;
+
+  background-image:
+    url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=2000&q=90");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.brewspot-food-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: -1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(37, 24, 16, 0.95) 0%,
+      rgba(37, 24, 16, 0.7) 48%,
+      rgba(37, 24, 16, 0.22) 100%
+    );
+}
+
+.brewspot-food-hero-content {
+  width: min(700px, 100%);
+}
+
+.brewspot-food-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: #e2b26e;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+.brewspot-food-hero h1 {
+  margin: 0;
+
+  font-size: clamp(3rem, 6vw, 6rem);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.05em;
+}
+
+.brewspot-food-hero h1 span {
+  color: #d6a15d;
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+.brewspot-food-hero p {
+  max-width: 580px;
+
+  margin: 28px 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  line-height: 1.8;
+}
+
+.brewspot-food-hero-btn {
+  min-height: 50px;
+
+  padding: 0 24px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  background: #d6a15d;
+
+  color: #30251f;
+
+  text-decoration: none;
+
+  font-weight: 800;
+
+  transition: 0.3s ease;
+}
+
+.brewspot-food-hero-btn:hover {
+  background: #e6b978;
+
+  color: #30251f;
+
+  transform: translateY(-2px);
+}
+
+.brewspot-food-hero-note {
+  position: absolute;
+
+  right: 8%;
+  bottom: 10%;
+
+  width: 130px;
+  height: 130px;
+
+  border-radius: 50%;
+
+  background: #d6a15d;
+
+  color: #30251f;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  text-align: center;
+
+  transform: rotate(-8deg);
+}
+
+.brewspot-food-hero-note strong {
+  font-size: 1rem;
+
+  letter-spacing: 0.08em;
+}
+
+.brewspot-food-hero-note span {
+  font-size: 0.55rem;
+
+  letter-spacing: 0.15em;
+}
+
+
+/* =========================================================
+   COMMON LABEL
+========================================================= */
+
+.brewspot-food-label {
+  display: inline-block;
+
+  margin-bottom: 17px;
+
+  color: var(--food-gold);
+
+  font-size: 0.7rem;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* =========================================================
+   FOOD MENU
+========================================================= */
+
+.brewspot-food-menu {
+  padding: 110px 6%;
+
+  background: var(--food-section);
+}
+
+.brewspot-food-menu-heading {
+  width: min(1250px, 100%);
+
+  margin: 0 auto 50px;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 60px;
+}
+
+.brewspot-food-menu-heading h2 {
+  margin: 0;
+
+  font-size: clamp(2.6rem, 5vw, 4.7rem);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.05em;
+}
+
+.brewspot-food-menu-heading h2 span {
+  color: var(--food-brown);
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+.brewspot-food-menu-heading > p {
+  max-width: 430px;
+
+  margin: 0 0 4px;
+
+  color: var(--food-muted);
+
+  line-height: 1.8;
+}
+
+
+/* GRID */
+
+.brewspot-food-cards {
+  width: min(1250px, 100%);
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+
+/* CARD */
+
+.brewspot-food-card {
+  overflow: hidden;
+
+  background: var(--food-card);
+
+  border: 1px solid var(--food-border);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.brewspot-food-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 20px 45px rgba(48, 37, 31, 0.1);
+}
+
+.brewspot-food-card-image {
+  position: relative;
+
+  height: 280px;
+
+  overflow: hidden;
+}
+
+.brewspot-food-card-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.brewspot-food-card:hover
+  .brewspot-food-card-image img {
+  transform: scale(1.07);
+}
+
+
+/* TAG */
+
+.brewspot-food-tag {
+  position: absolute;
+
+  top: 15px;
+  left: 15px;
+
+  padding: 7px 10px;
+
+  background: rgba(48, 37, 31, 0.9);
+
+  color: #ffffff;
+
+  font-size: 0.6rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* RATING */
+
+.brewspot-food-rating {
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  min-height: 31px;
+
+  padding: 0 10px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  color: #30251f;
+
+  font-size: 0.74rem;
+
+  font-weight: 800;
+}
+
+.brewspot-food-rating svg {
+  color: #c28b38;
+
+  fill: #c28b38;
+}
+
+
+/* CONTENT */
+
+.brewspot-food-card-content {
+  padding: 25px;
+}
+
+.brewspot-food-card-title {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.brewspot-food-card-title h3 {
+  margin: 0;
+
+  font-size: 1.3rem;
+}
+
+.brewspot-food-card-title strong {
+  color: var(--food-brown);
+
+  font-size: 1rem;
+
+  flex-shrink: 0;
+}
+
+.brewspot-food-card-content p {
+  min-height: 54px;
+
+  margin: 13px 0 22px;
+
+  color: var(--food-muted);
+
+  font-size: 0.86rem;
+
+  line-height: 1.7;
+}
+
+
+/* ORDER BUTTON */
+
+.brewspot-food-order-btn {
+  width: 100%;
+
+  min-height: 47px;
+
+  border: 1px solid var(--food-brown);
+
+  background: transparent;
+
+  color: var(--food-brown);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.brewspot-food-order-btn:hover {
+  background: var(--food-brown);
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   MADE FOR EVERY CRAVING
+========================================================= */
+
+.brewspot-food-craving {
+  width: 100%;
+
+  padding: 110px 7%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 75px;
+
+  align-items: center;
+
+  background: var(--food-bg);
+
+  box-sizing: border-box;
+}
+
+.brewspot-food-craving-content {
+  max-width: 600px;
+}
+
+.brewspot-food-craving-content h2 {
+  margin: 0;
+
+  font-size: clamp(2.6rem, 5vw, 4.7rem);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.05em;
+}
+
+.brewspot-food-craving-content h2 span {
+  color: var(--food-brown);
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+.brewspot-food-craving-content > p {
+  max-width: 540px;
+
+  margin: 25px 0 32px;
+
+  color: var(--food-muted);
+
+  line-height: 1.85;
+}
+
+
+/* POINTS */
+
+.brewspot-food-craving-points {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid var(--food-border);
+
+  border-bottom: 1px solid var(--food-border);
+
+  margin-bottom: 28px;
+}
+
+.brewspot-food-craving-points div {
+  padding: 17px 12px;
+
+  border-right: 1px solid var(--food-border);
+}
+
+.brewspot-food-craving-points div:last-child {
+  border-right: 0;
+}
+
+.brewspot-food-craving-points strong,
+.brewspot-food-craving-points span {
+  display: block;
+}
+
+.brewspot-food-craving-points strong {
+  color: var(--food-gold);
+
+  font-size: 0.7rem;
+
+  margin-bottom: 5px;
+}
+
+.brewspot-food-craving-points span {
+  font-size: 0.8rem;
+
+  font-weight: 700;
+}
+
+
+/* BUTTON */
+
+.brewspot-food-craving-btn {
+  min-height: 50px;
+
+  padding: 0 23px;
+
+  border: 1px solid var(--food-brown);
+
+  background: var(--food-brown);
+
+  color: #ffffff;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.brewspot-food-craving-btn:hover {
+  background: transparent;
+
+  color: var(--food-brown);
+
+  transform: translateY(-2px);
+}
+
+
+/* IMAGES */
+
+.brewspot-food-craving-images {
+  position: relative;
+
+  min-height: 500px;
+}
+
+.brewspot-food-small-image {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 43%;
+  height: 250px;
+
+  overflow: hidden;
+
+  border: 10px solid var(--food-bg);
+
+  z-index: 2;
+}
+
+.brewspot-food-small-image img,
+.brewspot-food-large-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.brewspot-food-large-image {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 75%;
+  height: 420px;
+
+  overflow: hidden;
+}
+
+.brewspot-food-large-image:hover img,
+.brewspot-food-small-image:hover img {
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   ORDER MODAL
+========================================================= */
+
+.brewspot-food-order-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  padding: 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow-y: auto;
+
+  background: rgba(25, 17, 12, 0.75);
+
+  backdrop-filter: blur(7px);
+}
+
+.brewspot-food-order-modal {
+  position: relative;
+
+  width: min(720px, 100%);
+
+  max-height: 92vh;
+
+  overflow-y: auto;
+
+  padding: 38px;
+
+  box-sizing: border-box;
+
+  background: var(--food-card);
+
+  color: var(--food-text);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.3);
+}
+
+.brewspot-food-order-close {
+  position: absolute;
+
+  top: 17px;
+  right: 17px;
+
+  width: 38px;
+  height: 38px;
+
+  border: 0;
+
+  background: var(--food-section);
+
+  color: var(--food-text);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.brewspot-food-order-close:hover {
+  background: var(--food-brown);
+
+  color: #ffffff;
+}
+
+
+/* ORDER HEADER */
+
+.brewspot-food-order-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding-right: 45px;
+}
+
+.brewspot-food-order-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: var(--food-brown);
+
+  color: #ffffff;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.brewspot-food-order-header span {
+  color: var(--food-gold);
+
+  font-size: 0.65rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.brewspot-food-order-header h3 {
+  margin: 3px 0 0;
+
+  font-size: 1.8rem;
+}
+
+.brewspot-food-order-description {
+  margin: 17px 0 25px;
+
+  color: var(--food-muted);
+
+  line-height: 1.7;
+}
+
+
+/* FORM */
+
+.brewspot-food-order-modal form {
+  display: grid;
+
+  gap: 17px;
+}
+
+.brewspot-food-form-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+}
+
+.brewspot-food-form-grid.three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.brewspot-food-form-field {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.brewspot-food-form-field label {
+  color: var(--food-text);
+
+  font-size: 0.77rem;
+
+  font-weight: 800;
+}
+
+.brewspot-food-form-field input,
+.brewspot-food-form-field select {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 12px 13px;
+
+  border: 1px solid var(--food-border);
+
+  background: var(--food-bg);
+
+  color: var(--food-text);
+
+  outline: none;
+
+  font-family: inherit;
+
+  font-size: 0.87rem;
+}
+
+.brewspot-food-form-field input:focus,
+.brewspot-food-form-field select:focus {
+  border-color: var(--food-gold);
+}
+
+
+/* PLACE ORDER */
+
+.brewspot-food-place-order {
+  min-height: 51px;
+
+  border: 0;
+
+  background: var(--food-brown);
+
+  color: #ffffff;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.brewspot-food-place-order:hover {
+  opacity: 0.9;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SUCCESS
+========================================================= */
+
+.brewspot-food-success {
+  min-height: 470px;
+
+  padding: 15px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.brewspot-food-success-icon {
+  width: 70px;
+  height: 70px;
+
+  margin-bottom: 18px;
+
+  border-radius: 50%;
+
+  background: #e7d7c2;
+
+  color: var(--food-brown);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2rem;
+}
+
+.brewspot-food-success > span {
+  color: var(--food-gold);
+
+  font-size: 0.68rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+.brewspot-food-success h3 {
+  margin: 14px 0;
+
+  font-size: clamp(2rem, 5vw, 3.2rem);
+
+  line-height: 1;
+}
+
+.brewspot-food-success h3 em {
+  color: var(--food-brown);
+
+  font-style: italic;
+}
+
+.brewspot-food-success > p {
+  max-width: 500px;
+
+  color: var(--food-muted);
+
+  line-height: 1.8;
+}
+
+.brewspot-food-success-info {
+  width: min(470px, 100%);
+
+  margin: 25px 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid var(--food-border);
+
+  border-bottom: 1px solid var(--food-border);
+}
+
+.brewspot-food-success-info div {
+  padding: 15px;
+
+  border-right: 1px solid var(--food-border);
+}
+
+.brewspot-food-success-info div:last-child {
+  border-right: 0;
+}
+
+.brewspot-food-success-info small,
+.brewspot-food-success-info strong {
+  display: block;
+}
+
+.brewspot-food-success-info small {
+  margin-bottom: 5px;
+
+  color: var(--food-muted);
+
+  font-size: 0.62rem;
+}
+
+.brewspot-food-success-info strong {
+  font-size: 0.82rem;
+}
+
+.brewspot-food-success-btn {
+  min-width: 120px;
+
+  min-height: 46px;
+
+  border: 0;
+
+  background: var(--food-brown);
+
+  color: #ffffff;
+
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.brewspot-dark .brewspot-food-page {
+  --food-bg: #2d211a;
+  --food-section: #39291f;
+  --food-card: #443228;
+  --food-text: #f5ede5;
+  --food-muted: #c5b4a5;
+  --food-brown: #d6a15d;
+  --food-gold: #e2b36c;
+  --food-border: rgba(255, 255, 255, 0.11);
+}
+
+body.brewspot-dark .brewspot-food-hero-overlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(28, 19, 14, 0.96),
+      rgba(28, 19, 14, 0.74),
+      rgba(28, 19, 14, 0.35)
+    );
+}
+
+body.brewspot-dark .brewspot-food-card-rating {
+  background: rgba(45, 33, 26, 0.94);
+
+  color: #ffffff;
+}
+
+body.brewspot-dark .brewspot-food-tag {
+  background: rgba(27, 20, 16, 0.95);
+}
+
+body.brewspot-dark .brewspot-food-order-btn {
+  color: #e2b36c;
+
+  border-color: #e2b36c;
+}
+
+body.brewspot-dark .brewspot-food-order-btn:hover {
+  background: #d6a15d;
+
+  color: #2d211a;
+}
+
+body.brewspot-dark .brewspot-food-craving-content h2 span {
+  color: #e2b36c;
+}
+
+body.brewspot-dark .brewspot-food-craving-btn {
+  color: #2d211a;
+}
+
+body.brewspot-dark .brewspot-food-craving-btn:hover {
+  background: transparent;
+
+  color: #e2b36c;
+}
+
+body.brewspot-dark .brewspot-food-small-image {
+  border-color: var(--food-bg);
+}
+
+body.brewspot-dark .brewspot-food-form-field input,
+body.brewspot-dark .brewspot-food-form-field select {
+  background: #33251d;
+
+  color: #f5ede5;
+}
+
+body.brewspot-dark .brewspot-food-order-close {
+  background: #39291f;
+
+  color: #f5ede5;
+}
+
+body.brewspot-dark .brewspot-food-place-order {
+  background: #d6a15d;
+
+  color: #2d211a;
+}
+
+body.brewspot-dark .brewspot-food-success-icon {
+  background: #513b29;
+}
+
+body.brewspot-dark .brewspot-food-success-btn {
+  background: #d6a15d;
+
+  color: #2d211a;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+  .brewspot-food-hero {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .brewspot-food-hero-note {
+    right: 5%;
+  }
+
+  .brewspot-food-menu {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .brewspot-food-craving {
+    padding-left: 6%;
+    padding-right: 6%;
+
+    gap: 45px;
+  }
+}
+
+@media (max-width: 950px) {
+  .brewspot-food-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brewspot-food-craving {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .brewspot-food-craving-images {
+    min-height: 420px;
+  }
+
+  .brewspot-food-large-image {
+    height: 350px;
+  }
+
+  .brewspot-food-small-image {
+    height: 210px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+  .brewspot-food-hero {
+    min-height: 610px;
+
+    padding: 90px 6%;
+  }
+
+  .brewspot-food-hero-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(37, 24, 16, 0.62),
+        rgba(37, 24, 16, 0.93)
+      );
+  }
+
+  .brewspot-food-hero h1 {
+    font-size: clamp(2.8rem, 12vw, 4.5rem);
+  }
+
+  .brewspot-food-hero p {
+    font-size: 0.92rem;
+
+    line-height: 1.75;
+  }
+
+  .brewspot-food-hero-note {
+    width: 100px;
+    height: 100px;
+
+    right: 5%;
+    bottom: 5%;
+  }
+
+  .brewspot-food-hero-note strong {
+    font-size: 0.8rem;
+  }
+
+  .brewspot-food-hero-note span {
+    font-size: 0.45rem;
+  }
+
+
+  /* MENU */
+
+  .brewspot-food-menu {
+    padding: 80px 5%;
+  }
+
+  .brewspot-food-menu-heading {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    margin-bottom: 40px;
+  }
+
+  .brewspot-food-cards {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .brewspot-food-card-image {
+    height: 280px;
+  }
+
+
+  /* CRAVING */
+
+  .brewspot-food-craving {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    padding: 80px 6%;
+  }
+
+  .brewspot-food-craving-content {
+    max-width: 100%;
+  }
+
+  .brewspot-food-craving-content h2 {
+    font-size: clamp(2.5rem, 11vw, 4rem);
+  }
+
+  .brewspot-food-craving-points {
+    grid-template-columns: 1fr;
+  }
+
+  .brewspot-food-craving-points div {
+    border-right: 0;
+
+    border-bottom: 1px solid var(--food-border);
+  }
+
+  .brewspot-food-craving-points div:last-child {
+    border-bottom: 0;
+  }
+
+  .brewspot-food-craving-btn {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .brewspot-food-craving-images {
+    min-height: 360px;
+  }
+
+  .brewspot-food-large-image {
+    width: 78%;
+
+    height: 320px;
+  }
+
+  .brewspot-food-small-image {
+    width: 46%;
+
+    height: 190px;
+
+    border-width: 7px;
+  }
+
+
+  /* MODAL */
+
+  .brewspot-food-order-overlay {
+    padding: 12px;
+  }
+
+  .brewspot-food-order-modal {
+    max-height: 95vh;
+
+    padding: 28px 20px;
+  }
+
+  .brewspot-food-form-grid,
+  .brewspot-food-form-grid.three {
+    grid-template-columns: 1fr;
+  }
+
+  .brewspot-food-success-info {
+    grid-template-columns: 1fr;
+  }
+
+  .brewspot-food-success-info div {
+    border-right: 0;
+
+    border-bottom: 1px solid var(--food-border);
+  }
+
+  .brewspot-food-success-info div:last-child {
+    border-bottom: 0;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .brewspot-food-hero {
+    min-height: 575px;
+
+    padding: 80px 5%;
+  }
+
+  .brewspot-food-hero h1 {
+    font-size: clamp(2.5rem, 14vw, 3.7rem);
+  }
+
+  .brewspot-food-hero p {
+    font-size: 0.86rem;
+  }
+
+  .brewspot-food-hero-btn {
+    width: 100%;
+  }
+
+  .brewspot-food-hero-note {
+    width: 88px;
+    height: 88px;
+
+    right: 4%;
+    bottom: 4%;
+  }
+
+  .brewspot-food-menu {
+    padding: 65px 5%;
+  }
+
+  .brewspot-food-card-image {
+    height: 245px;
+  }
+
+  .brewspot-food-card-content {
+    padding: 21px;
+  }
+
+  .brewspot-food-card-title {
+    flex-direction: column;
+
+    gap: 7px;
+  }
+
+  .brewspot-food-card-content p {
+    min-height: auto;
+  }
+
+  .brewspot-food-craving {
+    padding: 65px 5%;
+  }
+
+  .brewspot-food-craving-images {
+    min-height: 290px;
+  }
+
+  .brewspot-food-large-image {
+    height: 250px;
+  }
+
+  .brewspot-food-small-image {
+    height: 150px;
+  }
+
+  .brewspot-food-order-modal {
+    padding: 24px 16px;
+  }
+
+  .brewspot-food-order-header {
+    padding-right: 30px;
+  }
+
+  .brewspot-food-order-header h3 {
+    font-size: 1.35rem;
+  }
+
+  .brewspot-food-order-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .brewspot-food-success h3 {
+    font-size: 1.9rem;
+  }
+}

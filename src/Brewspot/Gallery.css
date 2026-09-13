@@ -1,0 +1,453 @@
+/* =========================================
+   BREWSPOT - GALLERY
+========================================= */
+
+.brewspot-gallery {
+
+  padding: 110px 0;
+
+  background: #f3eee8;
+
+  color: #24180f;
+
+  overflow: hidden;
+
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.brewspot-gallery-heading {
+
+  max-width: 760px;
+
+  margin: 0 auto 65px;
+
+}
+
+.brewspot-gallery-label {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 18px;
+
+  color: #563921;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+}
+
+.brewspot-gallery-label svg {
+
+  font-size: 16px;
+
+}
+
+.brewspot-gallery-heading h2 {
+
+  margin: 0;
+
+  font-size: clamp(38px, 5vw, 64px);
+
+  line-height: 1.08;
+
+  font-weight: 700;
+
+  letter-spacing: -2px;
+
+}
+
+.brewspot-gallery-heading h2 span {
+
+  color: #563921;
+
+}
+
+.brewspot-gallery-heading p {
+
+  max-width: 650px;
+
+  margin: 24px auto 0;
+
+  color: #76695f;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+}
+
+
+/* =========================================
+   GALLERY CARD
+========================================= */
+
+.brewspot-gallery-card {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 360px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: #ddd;
+
+  cursor: pointer;
+
+}
+
+.brewspot-gallery-card img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform 0.7s ease,
+    filter 0.5s ease;
+
+}
+
+.brewspot-gallery-card:hover img {
+
+  transform: scale(1.08);
+
+  filter: brightness(0.72);
+
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.brewspot-gallery-overlay {
+
+  position: absolute;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 25px;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(0, 0, 0, 0.72)
+    );
+
+  color: #ffffff;
+
+  transform: translateY(8px);
+
+  opacity: 0;
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+
+}
+
+.brewspot-gallery-card:hover .brewspot-gallery-overlay {
+
+  opacity: 1;
+
+  transform: translateY(0);
+
+}
+
+.brewspot-gallery-overlay span {
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+}
+
+.brewspot-gallery-overlay svg {
+
+  font-size: 20px;
+
+  transition: transform 0.3s ease;
+
+}
+
+.brewspot-gallery-card:hover .brewspot-gallery-overlay svg {
+
+  transform: translateX(5px);
+
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.brewspot-gallery-button-wrap {
+
+  margin-top: 50px;
+
+}
+
+.brewspot-gallery-btn {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 25px;
+
+  border: 1px solid #563921;
+
+  border-radius: 50px;
+
+  background: #563921;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+
+}
+
+.brewspot-gallery-btn svg {
+
+  transition: transform 0.25s ease;
+
+}
+
+.brewspot-gallery-btn:hover {
+
+  background: transparent;
+
+  color: #563921;
+
+  transform: translateY(-2px);
+
+}
+
+.brewspot-gallery-btn:hover svg {
+
+  transform: translateX(5px);
+
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.brewspot-dark .brewspot-gallery {
+
+  background: #171412;
+
+  color: #f4eee7;
+
+}
+
+body.brewspot-dark .brewspot-gallery-label {
+
+  color: #d6a15d;
+
+}
+
+body.brewspot-dark .brewspot-gallery-heading h2 span {
+
+  color: #d6a15d;
+
+}
+
+body.brewspot-dark .brewspot-gallery-heading p {
+
+  color: #aaa7a2;
+
+}
+
+body.brewspot-dark .brewspot-gallery-btn {
+
+  background: #d6a15d;
+
+  border-color: #d6a15d;
+
+  color: #16100b;
+
+}
+
+body.brewspot-dark .brewspot-gallery-btn:hover {
+
+  background: transparent;
+
+  color: #d6a15d;
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991.98px) {
+
+  .brewspot-gallery {
+
+    padding: 90px 0;
+
+  }
+
+  .brewspot-gallery-heading {
+
+    margin-bottom: 50px;
+
+  }
+
+  .brewspot-gallery-card {
+
+    height: 330px;
+
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767.98px) {
+
+  .brewspot-gallery {
+
+    padding: 75px 0;
+
+  }
+
+  .brewspot-gallery-heading {
+
+    margin-bottom: 40px;
+
+  }
+
+  .brewspot-gallery-heading h2 {
+
+    font-size: 38px;
+
+    letter-spacing: -1.2px;
+
+  }
+
+  .brewspot-gallery-heading p {
+
+    font-size: 14px;
+
+  }
+
+  .brewspot-gallery-card {
+
+    height: 330px;
+
+    border-radius: 20px;
+
+  }
+
+  /* Keep overlay visible on mobile */
+
+  .brewspot-gallery-overlay {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+  .brewspot-gallery-button-wrap {
+
+    margin-top: 40px;
+
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+  .brewspot-gallery {
+
+    padding: 60px 0;
+
+  }
+
+  .brewspot-gallery-heading h2 {
+
+    font-size: 32px;
+
+  }
+
+  .brewspot-gallery-label {
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+  }
+
+  .brewspot-gallery-card {
+
+    height: 290px;
+
+  }
+
+  .brewspot-gallery-overlay {
+
+    padding: 20px;
+
+  }
+
+  .brewspot-gallery-overlay span {
+
+    font-size: 14px;
+
+  }
+
+}

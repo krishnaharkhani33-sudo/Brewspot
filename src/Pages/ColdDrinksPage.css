@@ -1,0 +1,1281 @@
+/* =========================================================
+   BREWSPOT COLD DRINKS PAGE
+========================================================= */
+
+.brewspot-cold-page {
+  --cold-bg: #faf7f3;
+  --cold-section: #f3eee8;
+  --cold-card: #ffffff;
+  --cold-text: #30251f;
+  --cold-muted: #766a61;
+  --cold-brown: #563921;
+  --cold-gold: #d6a15d;
+  --cold-border: rgba(86, 57, 33, 0.14);
+
+  background: var(--cold-bg);
+  color: var(--cold-text);
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.brewspot-cold-hero {
+  position: relative;
+
+  min-height: 640px;
+
+  padding: 100px 8%;
+
+  display: flex;
+  align-items: center;
+
+  isolation: isolate;
+  overflow: hidden;
+
+  color: #fff;
+}
+
+.brewspot-cold-hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: -2;
+
+  background-image:
+    url("https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=2000&q=90");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.brewspot-cold-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: -1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(37, 25, 18, 0.95),
+      rgba(37, 25, 18, 0.68),
+      rgba(37, 25, 18, 0.2)
+    );
+}
+
+.brewspot-cold-hero-content {
+  width: min(700px, 100%);
+}
+
+.brewspot-cold-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: #e2b26e;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+.brewspot-cold-hero h1 {
+  margin: 0;
+
+  font-size: clamp(3rem, 6vw, 6rem);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.05em;
+}
+
+.brewspot-cold-hero h1 span {
+  color: #d6a15d;
+
+  font-style: italic;
+  font-weight: 500;
+}
+
+.brewspot-cold-hero p {
+  max-width: 580px;
+
+  margin: 28px 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  line-height: 1.8;
+}
+
+.brewspot-cold-hero-btn {
+  min-height: 50px;
+
+  padding: 0 24px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  background: #d6a15d;
+
+  color: #30251f;
+
+  text-decoration: none;
+
+  font-weight: 800;
+
+  transition: 0.3s ease;
+}
+
+.brewspot-cold-hero-btn:hover {
+  background: #e6b978;
+
+  color: #30251f;
+
+  transform: translateY(-2px);
+}
+
+.brewspot-cold-hero-badge {
+  position: absolute;
+
+  right: 9%;
+  bottom: 10%;
+
+  width: 130px;
+  height: 130px;
+
+  border-radius: 50%;
+
+  background: #d6a15d;
+
+  color: #30251f;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  text-align: center;
+
+  transform: rotate(-8deg);
+}
+
+.brewspot-cold-hero-badge strong {
+  font-size: 1rem;
+
+  letter-spacing: 0.08em;
+}
+
+.brewspot-cold-hero-badge span {
+  font-size: 0.55rem;
+
+  letter-spacing: 0.15em;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.brewspot-cold-label {
+  display: inline-block;
+
+  margin-bottom: 17px;
+
+  color: var(--cold-gold);
+
+  font-size: 0.7rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.brewspot-cold-menu {
+  padding: 110px 6%;
+
+  background: var(--cold-section);
+}
+
+.brewspot-cold-heading {
+  width: min(1250px, 100%);
+
+  margin: 0 auto 50px;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 60px;
+}
+
+.brewspot-cold-heading h2 {
+  margin: 0;
+
+  font-size: clamp(2.6rem, 5vw, 4.7rem);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.05em;
+}
+
+.brewspot-cold-heading h2 span {
+  color: var(--cold-brown);
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+.brewspot-cold-heading > p {
+  max-width: 430px;
+
+  margin: 0 0 4px;
+
+  color: var(--cold-muted);
+
+  line-height: 1.8;
+}
+
+.brewspot-cold-grid {
+  width: min(1250px, 100%);
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.brewspot-cold-card {
+  overflow: hidden;
+
+  background: var(--cold-card);
+
+  border: 1px solid var(--cold-border);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.brewspot-cold-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 20px 45px rgba(48, 37, 31, 0.1);
+}
+
+.brewspot-cold-card-image {
+  position: relative;
+
+  height: 280px;
+
+  overflow: hidden;
+}
+
+.brewspot-cold-card-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.brewspot-cold-card:hover
+  .brewspot-cold-card-image img {
+  transform: scale(1.07);
+}
+
+.brewspot-cold-tag {
+  position: absolute;
+
+  top: 15px;
+  left: 15px;
+
+  padding: 7px 10px;
+
+  background: rgba(48, 37, 31, 0.9);
+
+  color: #fff;
+
+  font-size: 0.6rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.brewspot-cold-rating {
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  min-height: 31px;
+
+  padding: 0 10px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  color: #30251f;
+
+  font-size: 0.74rem;
+
+  font-weight: 800;
+}
+
+.brewspot-cold-rating svg {
+  color: #c28b38;
+
+  fill: #c28b38;
+}
+
+.brewspot-cold-card-content {
+  padding: 25px;
+}
+
+.brewspot-cold-card-title {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.brewspot-cold-card-title h3 {
+  margin: 0;
+
+  font-size: 1.3rem;
+}
+
+.brewspot-cold-card-title strong {
+  color: var(--cold-brown);
+
+  font-size: 1rem;
+
+  flex-shrink: 0;
+}
+
+.brewspot-cold-card-content p {
+  min-height: 54px;
+
+  margin: 13px 0 22px;
+
+  color: var(--cold-muted);
+
+  font-size: 0.86rem;
+
+  line-height: 1.7;
+}
+
+.brewspot-cold-order-btn {
+  width: 100%;
+
+  min-height: 47px;
+
+  border: 1px solid var(--cold-brown);
+
+  background: transparent;
+
+  color: var(--cold-brown);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.brewspot-cold-order-btn:hover {
+  background: var(--cold-brown);
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   REFRESHMENT
+========================================================= */
+
+.brewspot-cold-refresh {
+  width: 100%;
+
+  padding: 105px 7%;
+
+  display: grid;
+
+  grid-template-columns: 0.85fr 1.15fr;
+
+  gap: 75px;
+
+  align-items: center;
+
+  background: var(--cold-bg);
+
+  box-sizing: border-box;
+}
+
+.brewspot-cold-refresh-image {
+  width: min(440px, 100%);
+
+  height: 400px;
+
+  margin: auto;
+
+  overflow: hidden;
+}
+
+.brewspot-cold-refresh-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.brewspot-cold-refresh-image:hover img {
+  transform: scale(1.05);
+}
+
+.brewspot-cold-refresh-content {
+  max-width: 620px;
+}
+
+.brewspot-cold-refresh-content h2 {
+  margin: 0;
+
+  font-size: clamp(2.6rem, 5vw, 4.7rem);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.05em;
+}
+
+.brewspot-cold-refresh-content h2 span {
+  color: var(--cold-brown);
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+.brewspot-cold-refresh-content > p {
+  max-width: 540px;
+
+  margin: 25px 0 30px;
+
+  color: var(--cold-muted);
+
+  line-height: 1.85;
+}
+
+.brewspot-cold-points {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  margin-bottom: 28px;
+
+  border-top: 1px solid var(--cold-border);
+
+  border-bottom: 1px solid var(--cold-border);
+}
+
+.brewspot-cold-points div {
+  padding: 17px 12px;
+
+  border-right: 1px solid var(--cold-border);
+}
+
+.brewspot-cold-points div:last-child {
+  border-right: 0;
+}
+
+.brewspot-cold-points strong,
+.brewspot-cold-points span {
+  display: block;
+}
+
+.brewspot-cold-points strong {
+  color: var(--cold-gold);
+
+  font-size: 0.7rem;
+
+  margin-bottom: 5px;
+}
+
+.brewspot-cold-points span {
+  font-size: 0.8rem;
+
+  font-weight: 700;
+}
+
+.brewspot-cold-refresh-btn {
+  min-height: 50px;
+
+  padding: 0 23px;
+
+  border: 1px solid var(--cold-brown);
+
+  background: var(--cold-brown);
+
+  color: #fff;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.brewspot-cold-refresh-btn:hover {
+  background: transparent;
+
+  color: var(--cold-brown);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ORDER MODAL
+========================================================= */
+
+.brewspot-cold-order-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  padding: 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow-y: auto;
+
+  background: rgba(25, 17, 12, 0.75);
+
+  backdrop-filter: blur(7px);
+}
+
+.brewspot-cold-order-modal {
+  position: relative;
+
+  width: min(720px, 100%);
+
+  max-height: 92vh;
+
+  overflow-y: auto;
+
+  padding: 38px;
+
+  box-sizing: border-box;
+
+  background: var(--cold-card);
+
+  color: var(--cold-text);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.3);
+}
+
+.brewspot-cold-order-close {
+  position: absolute;
+
+  top: 17px;
+  right: 17px;
+
+  width: 38px;
+  height: 38px;
+
+  border: 0;
+
+  background: var(--cold-section);
+
+  color: var(--cold-text);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.brewspot-cold-order-close:hover {
+  background: var(--cold-brown);
+
+  color: #fff;
+}
+
+.brewspot-cold-order-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding-right: 45px;
+}
+
+.brewspot-cold-order-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: var(--cold-brown);
+
+  color: #fff;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.brewspot-cold-order-header span {
+  color: var(--cold-gold);
+
+  font-size: 0.65rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.brewspot-cold-order-header h3 {
+  margin: 3px 0 0;
+
+  font-size: 1.8rem;
+}
+
+.brewspot-cold-order-description {
+  margin: 17px 0 25px;
+
+  color: var(--cold-muted);
+
+  line-height: 1.7;
+}
+
+.brewspot-cold-order-modal form {
+  display: grid;
+
+  gap: 17px;
+}
+
+.brewspot-cold-form-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+}
+
+.brewspot-cold-form-grid.three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.brewspot-cold-form-field {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.brewspot-cold-form-field label {
+  font-size: 0.77rem;
+
+  font-weight: 800;
+}
+
+.brewspot-cold-form-field input,
+.brewspot-cold-form-field select,
+.brewspot-cold-form-field textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 12px 13px;
+
+  border: 1px solid var(--cold-border);
+
+  background: var(--cold-bg);
+
+  color: var(--cold-text);
+
+  outline: none;
+
+  font-family: inherit;
+
+  font-size: 0.87rem;
+}
+
+.brewspot-cold-form-field input:focus,
+.brewspot-cold-form-field select:focus,
+.brewspot-cold-form-field textarea:focus {
+  border-color: var(--cold-gold);
+}
+
+.brewspot-cold-form-field textarea {
+  min-height: 95px;
+
+  resize: vertical;
+}
+
+.brewspot-cold-place-order {
+  min-height: 51px;
+
+  border: 0;
+
+  background: var(--cold-brown);
+
+  color: #fff;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   SUCCESS
+========================================================= */
+
+.brewspot-cold-success {
+  min-height: 470px;
+
+  padding: 15px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.brewspot-cold-success-icon {
+  width: 70px;
+  height: 70px;
+
+  margin-bottom: 18px;
+
+  border-radius: 50%;
+
+  background: #e7d7c2;
+
+  color: var(--cold-brown);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2rem;
+}
+
+.brewspot-cold-success > span {
+  color: var(--cold-gold);
+
+  font-size: 0.68rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+.brewspot-cold-success h3 {
+  margin: 14px 0;
+
+  font-size: clamp(2rem, 5vw, 3.2rem);
+
+  line-height: 1;
+}
+
+.brewspot-cold-success h3 em {
+  color: var(--cold-brown);
+
+  font-style: italic;
+}
+
+.brewspot-cold-success > p {
+  max-width: 500px;
+
+  color: var(--cold-muted);
+
+  line-height: 1.8;
+}
+
+.brewspot-cold-success-info {
+  width: min(470px, 100%);
+
+  margin: 25px 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid var(--cold-border);
+
+  border-bottom: 1px solid var(--cold-border);
+}
+
+.brewspot-cold-success-info div {
+  padding: 15px;
+
+  border-right: 1px solid var(--cold-border);
+}
+
+.brewspot-cold-success-info div:last-child {
+  border-right: 0;
+}
+
+.brewspot-cold-success-info small,
+.brewspot-cold-success-info strong {
+  display: block;
+}
+
+.brewspot-cold-success-info small {
+  margin-bottom: 5px;
+
+  color: var(--cold-muted);
+
+  font-size: 0.62rem;
+}
+
+.brewspot-cold-success-info strong {
+  font-size: 0.82rem;
+}
+
+.brewspot-cold-success-btn {
+  min-width: 120px;
+
+  min-height: 46px;
+
+  border: 0;
+
+  background: var(--cold-brown);
+
+  color: #fff;
+
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.brewspot-dark .brewspot-cold-page {
+  --cold-bg: #2d211a;
+  --cold-section: #39291f;
+  --cold-card: #443228;
+  --cold-text: #f5ede5;
+  --cold-muted: #c5b4a5;
+  --cold-brown: #d6a15d;
+  --cold-gold: #e2b36c;
+  --cold-border: rgba(255, 255, 255, 0.11);
+}
+
+body.brewspot-dark .brewspot-cold-hero-overlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(28, 19, 14, 0.96),
+      rgba(28, 19, 14, 0.74),
+      rgba(28, 19, 14, 0.35)
+    );
+}
+
+body.brewspot-dark .brewspot-cold-card-rating {
+  background: rgba(45, 33, 26, 0.94);
+  color: #fff;
+}
+
+body.brewspot-dark .brewspot-cold-tag {
+  background: rgba(27, 20, 16, 0.95);
+}
+
+body.brewspot-dark .brewspot-cold-order-btn {
+  color: #e2b36c;
+  border-color: #e2b36c;
+}
+
+body.brewspot-dark .brewspot-cold-order-btn:hover {
+  background: #d6a15d;
+  color: #2d211a;
+}
+
+body.brewspot-dark .brewspot-cold-refresh-content h2 span {
+  color: #e2b36c;
+}
+
+body.brewspot-dark .brewspot-cold-refresh-btn {
+  color: #2d211a;
+}
+
+body.brewspot-dark .brewspot-cold-refresh-btn:hover {
+  background: transparent;
+  color: #e2b36c;
+}
+
+body.brewspot-dark .brewspot-cold-form-field input,
+body.brewspot-dark .brewspot-cold-form-field select,
+body.brewspot-dark .brewspot-cold-form-field textarea {
+  background: #33251d;
+  color: #f5ede5;
+}
+
+body.brewspot-dark .brewspot-cold-order-close {
+  background: #39291f;
+  color: #f5ede5;
+}
+
+body.brewspot-dark .brewspot-cold-place-order {
+  background: #d6a15d;
+  color: #2d211a;
+}
+
+body.brewspot-dark .brewspot-cold-success-icon {
+  background: #513b29;
+}
+
+body.brewspot-dark .brewspot-cold-success-btn {
+  background: #d6a15d;
+  color: #2d211a;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+  .brewspot-cold-hero {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .brewspot-cold-hero-badge {
+    right: 5%;
+  }
+
+  .brewspot-cold-menu {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .brewspot-cold-refresh {
+    padding-left: 6%;
+    padding-right: 6%;
+
+    gap: 45px;
+  }
+}
+
+@media (max-width: 950px) {
+  .brewspot-cold-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brewspot-cold-refresh {
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 35px;
+  }
+
+  .brewspot-cold-refresh-image {
+    width: min(360px, 100%);
+    height: 340px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+  .brewspot-cold-hero {
+    min-height: 610px;
+
+    padding: 90px 6%;
+  }
+
+  .brewspot-cold-hero-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(37, 25, 18, 0.62),
+        rgba(37, 25, 18, 0.93)
+      );
+  }
+
+  .brewspot-cold-hero h1 {
+    font-size: clamp(2.8rem, 12vw, 4.5rem);
+  }
+
+  .brewspot-cold-hero p {
+    font-size: 0.92rem;
+
+    line-height: 1.75;
+  }
+
+  .brewspot-cold-hero-btn {
+    width: 100%;
+  }
+
+  .brewspot-cold-hero-badge {
+    width: 100px;
+    height: 100px;
+
+    right: 5%;
+    bottom: 5%;
+  }
+
+
+  /* MENU */
+
+  .brewspot-cold-menu {
+    padding: 80px 5%;
+  }
+
+  .brewspot-cold-heading {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    margin-bottom: 40px;
+  }
+
+  .brewspot-cold-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .brewspot-cold-card-image {
+    height: 280px;
+  }
+
+
+  /* REFRESH */
+
+  .brewspot-cold-refresh {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+    padding: 80px 6%;
+  }
+
+  .brewspot-cold-refresh-image {
+    width: min(400px, 100%);
+    height: 300px;
+
+    margin: auto;
+  }
+
+  .brewspot-cold-refresh-content {
+    max-width: 100%;
+  }
+
+  .brewspot-cold-refresh-content h2 {
+    font-size: clamp(2.5rem, 11vw, 4rem);
+  }
+
+  .brewspot-cold-points {
+    grid-template-columns: 1fr;
+  }
+
+  .brewspot-cold-points div {
+    border-right: 0;
+
+    border-bottom: 1px solid var(--cold-border);
+  }
+
+  .brewspot-cold-points div:last-child {
+    border-bottom: 0;
+  }
+
+  .brewspot-cold-refresh-btn {
+    width: 100%;
+  }
+
+
+  /* MODAL */
+
+  .brewspot-cold-order-overlay {
+    padding: 12px;
+  }
+
+  .brewspot-cold-order-modal {
+    max-height: 95vh;
+
+    padding: 28px 20px;
+  }
+
+  .brewspot-cold-form-grid,
+  .brewspot-cold-form-grid.three {
+    grid-template-columns: 1fr;
+  }
+
+  .brewspot-cold-success-info {
+    grid-template-columns: 1fr;
+  }
+
+  .brewspot-cold-success-info div {
+    border-right: 0;
+
+    border-bottom: 1px solid var(--cold-border);
+  }
+
+  .brewspot-cold-success-info div:last-child {
+    border-bottom: 0;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .brewspot-cold-hero {
+    min-height: 575px;
+
+    padding: 80px 5%;
+  }
+
+  .brewspot-cold-hero h1 {
+    font-size: clamp(2.5rem, 14vw, 3.7rem);
+  }
+
+  .brewspot-cold-hero p {
+    font-size: 0.86rem;
+  }
+
+  .brewspot-cold-menu {
+    padding: 65px 5%;
+  }
+
+  .brewspot-cold-card-image {
+    height: 245px;
+  }
+
+  .brewspot-cold-card-content {
+    padding: 21px;
+  }
+
+  .brewspot-cold-card-title {
+    flex-direction: column;
+
+    gap: 7px;
+  }
+
+  .brewspot-cold-card-content p {
+    min-height: auto;
+  }
+
+  .brewspot-cold-refresh {
+    padding: 65px 5%;
+  }
+
+  .brewspot-cold-refresh-image {
+    height: 260px;
+  }
+
+  .brewspot-cold-refresh-content h2 {
+    font-size: clamp(2.4rem, 13vw, 3.6rem);
+  }
+
+  .brewspot-cold-order-modal {
+    padding: 24px 16px;
+  }
+
+  .brewspot-cold-order-header {
+    padding-right: 30px;
+  }
+
+  .brewspot-cold-order-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .brewspot-cold-success h3 {
+    font-size: 1.9rem;
+  }
+}

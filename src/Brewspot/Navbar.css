@@ -1,0 +1,1322 @@
+/* =========================================================
+   BREWSPOT NAVBAR
+   FULL RESPONSIVE
+   LIGHT + DARK MODE
+   SIMPLE ICONS
+========================================================= */
+
+:root {
+  --brew-brown: #5a3825;
+  --brew-light-brown: #8a5a3b;
+  --brew-cream: #f8f3ec;
+  --brew-text: #3d2b20;
+  --brew-muted: #806b5c;
+  --brew-border: rgba(90, 56, 37, 0.14);
+  --brew-white: #ffffff;
+}
+
+
+/* =========================================================
+   MAIN NAVBAR
+========================================================= */
+
+.brewspot-navbar {
+  min-height: 76px;
+
+  background: rgba(255, 255, 255, 0.97) !important;
+
+  border-bottom: none !important;
+
+  box-shadow:
+    0 5px 25px rgba(45, 28, 18, 0.06);
+
+  z-index: 1000;
+}
+
+.brewspot-navbar .container {
+  min-height: 76px;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brewspot-brand {
+  display: flex !important;
+
+  align-items: center;
+
+  gap: 11px;
+
+  margin-right: 25px;
+
+  text-decoration: none !important;
+}
+
+.brewspot-logo {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: var(--brew-brown);
+
+  font-size: 27px;
+
+  flex-shrink: 0;
+}
+
+.brewspot-brand-text {
+  display: flex;
+
+  flex-direction: column;
+
+  line-height: 1;
+}
+
+.brewspot-name {
+  color: var(--brew-brown);
+
+  font-size: 19px;
+
+  font-weight: 800;
+
+  letter-spacing: 2.5px;
+}
+
+.brewspot-brand-text small {
+  margin-top: 5px;
+
+  color: #947b69;
+
+  font-size: 7px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.4px;
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.brewspot-main-nav {
+  gap: 5px;
+}
+
+.brewspot-nav-link {
+  position: relative;
+
+  display: flex !important;
+
+  align-items: center;
+
+  color: var(--brew-text) !important;
+
+  padding: 28px 13px !important;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  text-decoration: none !important;
+
+  transition: color 0.25s ease;
+}
+
+
+/* UNDERLINE */
+
+.brewspot-nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 13px;
+  right: 13px;
+
+  bottom: 19px;
+
+  height: 2px;
+
+  background: var(--brew-brown);
+
+  transform: scaleX(0);
+
+  transform-origin: center;
+
+  transition: transform 0.25s ease;
+}
+
+
+/* HOVER */
+
+.brewspot-nav-link:hover {
+  color: var(--brew-brown) !important;
+}
+
+
+/* ACTIVE */
+
+.brewspot-nav-link:hover::after,
+.brewspot-nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.brewspot-nav-link.active {
+  color: var(--brew-brown) !important;
+}
+
+
+/* =========================================================
+   DROPDOWN
+========================================================= */
+
+.brewspot-dropdown > a {
+  position: relative;
+
+  color: var(--brew-text) !important;
+
+  padding: 28px 13px !important;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  transition: color 0.25s ease;
+}
+
+.brewspot-dropdown > a:hover {
+  color: var(--brew-brown) !important;
+}
+
+.brewspot-dropdown.active > a {
+  color: var(--brew-brown) !important;
+}
+
+.brewspot-dropdown > a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 13px;
+  right: 13px;
+
+  bottom: 19px;
+
+  height: 2px;
+
+  background: var(--brew-brown);
+
+  transform: scaleX(0);
+
+  transform-origin: center;
+
+  transition: transform 0.25s ease;
+}
+
+.brewspot-dropdown:hover > a::after,
+.brewspot-dropdown.active > a::after {
+  transform: scaleX(1);
+}
+
+
+/* DROPDOWN MENU */
+
+.brewspot-dropdown .dropdown-menu {
+  min-width: 235px;
+
+  margin-top: 4px;
+
+  padding: 9px;
+
+  border: 1px solid var(--brew-border);
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 18px 45px rgba(40, 25, 15, 0.13);
+}
+
+.brewspot-dropdown .dropdown-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 10px 12px;
+
+  border-radius: 8px;
+
+  color: var(--brew-text);
+
+  font-size: 13px;
+
+  transition: 0.2s ease;
+}
+
+.brewspot-dropdown .dropdown-item svg {
+  font-size: 16px;
+}
+
+.brewspot-dropdown .dropdown-item:hover {
+  color: var(--brew-brown);
+
+  background: #f6eee7;
+}
+
+.brewspot-dropdown .dropdown-divider {
+  border-top-color: var(--brew-border);
+}
+
+.brewspot-view-menu {
+  justify-content: space-between;
+
+  font-weight: 600;
+}
+
+.brewspot-view-menu svg {
+  margin-left: auto;
+}
+
+
+/* =========================================================
+   NEW BADGE
+========================================================= */
+
+.brewspot-new-badge {
+  margin-left: 6px;
+
+  padding: 2px 5px;
+
+  border-radius: 4px;
+
+  background: #a76d45;
+
+  color: white;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  vertical-align: middle;
+}
+
+
+/* =========================================================
+   RIGHT ACTIONS
+========================================================= */
+
+.brewspot-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+
+  margin-left: 15px;
+}
+
+
+/* =========================================================
+   SIMPLE ICONS
+========================================================= */
+
+.brewspot-action {
+  width: auto !important;
+  height: auto !important;
+
+  min-width: auto !important;
+  min-height: auto !important;
+
+  padding: 5px !important;
+  margin: 0 !important;
+
+  display: inline-flex !important;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none !important;
+  border-radius: 0 !important;
+
+  background: transparent !important;
+
+  color: var(--brew-text) !important;
+
+  font-size: 19px;
+  line-height: 1;
+
+  box-shadow: none !important;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.search-action:hover,
+.account-action:hover,
+.theme-action:hover {
+  color: #a7653c !important;
+
+  transform: translateY(-2px);
+}
+
+.account-action::after {
+  display: none !important;
+}
+
+
+/* =========================================================
+   ACCOUNT DROPDOWN
+========================================================= */
+
+.brewspot-account-menu {
+  min-width: 220px;
+
+  margin-top: 10px !important;
+
+  padding: 8px;
+
+  border: 1px solid var(--brew-border);
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 18px 45px rgba(40, 25, 15, 0.13);
+}
+
+.brewspot-account-menu .dropdown-header {
+  color: var(--brew-brown);
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.brewspot-account-menu .dropdown-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 10px 12px;
+
+  border-radius: 8px;
+
+  color: var(--brew-text);
+
+  font-size: 13px;
+}
+
+.brewspot-account-menu .dropdown-item svg {
+  font-size: 16px;
+}
+
+.brewspot-account-menu .dropdown-item:hover {
+  background: #f6eee7;
+
+  color: var(--brew-brown);
+}
+
+
+/* =========================================================
+   BOOK TABLE
+========================================================= */
+
+.brewspot-book-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 11px 17px;
+
+  border: 1px solid var(--brew-brown);
+
+  border-radius: 7px;
+
+  background: var(--brew-brown);
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2px;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.brewspot-book-btn svg {
+  font-size: 15px;
+}
+
+.brewspot-book-btn:hover {
+  background: #7b4b31;
+
+  border-color: #7b4b31;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(90, 56, 37, 0.2);
+}
+
+
+/* =========================================================
+   MOBILE TOGGLE
+========================================================= */
+
+.brewspot-mobile-toggle {
+  display: none !important;
+
+  padding: 5px !important;
+
+  margin-left: auto;
+
+  border: none !important;
+  border-radius: 0 !important;
+
+  background: transparent !important;
+
+  color: var(--brew-text) !important;
+
+  font-size: 26px;
+
+  line-height: 1;
+
+  box-shadow: none !important;
+}
+
+.brewspot-mobile-toggle:hover {
+  color: var(--brew-brown) !important;
+}
+
+
+/* =========================================================
+   MOBILE OFFCANVAS
+========================================================= */
+
+.brewspot-offcanvas {
+  width: min(88vw, 390px) !important;
+
+  background: #fffaf5;
+
+  color: var(--brew-text);
+}
+
+.brewspot-offcanvas .offcanvas-header {
+  padding: 22px 20px;
+
+  border-bottom: 1px solid var(--brew-border);
+}
+
+.brewspot-offcanvas .offcanvas-body {
+  padding: 20px;
+}
+
+.brewspot-mobile-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.brewspot-mobile-brand strong {
+  display: block;
+
+  color: var(--brew-brown);
+
+  font-size: 18px;
+
+  letter-spacing: 2px;
+}
+
+.brewspot-mobile-brand small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: var(--brew-muted);
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+}
+
+.brewspot-mobile-close {
+  border: none;
+
+  background: transparent;
+
+  padding: 4px;
+
+  color: var(--brew-text);
+
+  font-size: 23px;
+
+  line-height: 1;
+
+  transition: color 0.2s ease;
+}
+
+.brewspot-mobile-close:hover {
+  color: var(--brew-brown);
+}
+
+
+/* =========================================================
+   MOBILE SEARCH
+========================================================= */
+
+.brewspot-mobile-search {
+  margin-bottom: 22px;
+}
+
+.brewspot-mobile-search .input-group {
+  overflow: hidden;
+
+  border: 1px solid var(--brew-border);
+
+  border-radius: 8px;
+}
+
+.brewspot-mobile-search .form-control {
+  border: none;
+
+  box-shadow: none;
+
+  background: transparent;
+
+  padding: 11px 13px;
+
+  font-size: 13px;
+}
+
+.brewspot-mobile-search .btn {
+  border: none;
+
+  background: var(--brew-brown);
+
+  color: white;
+
+  padding: 0 15px;
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+.brewspot-mobile-nav {
+  gap: 2px;
+}
+
+.brewspot-mobile-nav .nav-link {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 12px 4px;
+
+  border-bottom: 1px solid rgba(90, 56, 37, 0.08);
+
+  color: var(--brew-text);
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.brewspot-mobile-nav .nav-link.active {
+  color: var(--brew-brown);
+
+  font-weight: 600;
+
+  padding-left: 8px;
+}
+
+.brewspot-mobile-nav .nav-link:hover {
+  padding-left: 8px;
+
+  color: var(--brew-brown);
+}
+
+.brewspot-mobile-nav .nav-link svg {
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   MOBILE ACTIONS
+========================================================= */
+
+.brewspot-mobile-actions {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+
+  margin-top: 22px;
+}
+
+.brewspot-mobile-actions button {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 12px;
+
+  border: 1px solid var(--brew-border);
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: var(--brew-text);
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.brewspot-mobile-actions button:hover {
+  border-color: var(--brew-brown);
+
+  color: var(--brew-brown);
+}
+
+
+/* =========================================================
+   MOBILE BOOK
+========================================================= */
+
+.brewspot-mobile-book {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 14px;
+
+  padding: 13px;
+
+  border: 1px solid var(--brew-brown);
+
+  border-radius: 7px;
+
+  background: var(--brew-brown);
+
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.brewspot-mobile-book:hover {
+  background: #7b4b31;
+}
+
+
+/* =========================================================
+   MOBILE LOCATION
+========================================================= */
+
+.brewspot-mobile-location {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 11px;
+
+  margin-top: 25px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid var(--brew-border);
+
+  color: var(--brew-muted);
+}
+
+.brewspot-mobile-location strong {
+  display: block;
+
+  color: var(--brew-text);
+
+  font-size: 13px;
+}
+
+.brewspot-mobile-location small {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   SEARCH + BOOKING MODAL
+========================================================= */
+
+.brewspot-search-modal .modal-content,
+.brewspot-booking-modal .modal-content {
+  border: none;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  color: var(--brew-text);
+
+  box-shadow:
+    0 25px 70px rgba(30, 20, 10, 0.2);
+}
+
+.brewspot-search-modal .modal-header,
+.brewspot-booking-modal .modal-header {
+  border-bottom: 1px solid var(--brew-border);
+
+  padding: 18px 20px;
+}
+
+.brewspot-search-modal .modal-title,
+.brewspot-booking-modal .modal-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: var(--brew-brown);
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+.brewspot-search-modal .modal-body,
+.brewspot-booking-modal .modal-body {
+  padding: 22px;
+}
+
+.brewspot-search-modal .form-control {
+  border-color: var(--brew-border);
+
+  box-shadow: none;
+}
+
+.brewspot-search-modal .input-group .btn {
+  background: var(--brew-brown);
+
+  border-color: var(--brew-brown);
+
+  color: white;
+}
+
+
+/* =========================================================
+   POPULAR SEARCH
+========================================================= */
+
+.brewspot-popular-searches {
+  margin-top: 20px;
+}
+
+.brewspot-popular-searches small {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--brew-muted);
+
+  font-size: 11px;
+}
+
+.brewspot-popular-searches > div {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.brewspot-popular-searches .btn {
+  border-radius: 20px;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   BOOKING MODAL
+========================================================= */
+
+.brewspot-booking-text {
+  margin-bottom: 20px;
+
+  color: var(--brew-muted);
+
+  font-size: 13px;
+}
+
+.brewspot-booking-modal .form-label {
+  color: var(--brew-text);
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.brewspot-booking-modal .form-control,
+.brewspot-booking-modal .form-select {
+  border-color: var(--brew-border);
+
+  border-radius: 7px;
+
+  box-shadow: none;
+
+  font-size: 13px;
+}
+
+.brewspot-booking-modal .form-control:focus,
+.brewspot-booking-modal .form-select:focus {
+  border-color: var(--brew-light-brown);
+
+  box-shadow:
+    0 0 0 2px rgba(138, 90, 59, 0.08);
+}
+
+.brewspot-confirm-booking {
+  display: flex !important;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 12px;
+
+  border: none !important;
+
+  border-radius: 7px !important;
+
+  background: var(--brew-brown) !important;
+
+  color: white !important;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.brewspot-confirm-booking:hover {
+  background: #7b4b31 !important;
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.brewspot-dark {
+  background: #12100e;
+
+  color: #eee5dc;
+}
+
+body.brewspot-dark .brewspot-navbar {
+  background: #171412 !important;
+
+  box-shadow:
+    0 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+body.brewspot-dark .brewspot-logo,
+body.brewspot-dark .brewspot-name {
+  color: #e0b28b;
+}
+
+body.brewspot-dark .brewspot-brand-text small {
+  color: #a99789;
+}
+
+body.brewspot-dark .brewspot-nav-link,
+body.brewspot-dark .brewspot-dropdown > a,
+body.brewspot-dark .brewspot-action,
+body.brewspot-dark .brewspot-mobile-toggle {
+  color: #eee5dc !important;
+}
+
+body.brewspot-dark .brewspot-nav-link:hover,
+body.brewspot-dark .brewspot-nav-link.active,
+body.brewspot-dark .brewspot-dropdown > a:hover,
+body.brewspot-dark .brewspot-dropdown.active > a,
+body.brewspot-dark .brewspot-action:hover,
+body.brewspot-dark .brewspot-mobile-toggle:hover {
+  color: #e0b28b !important;
+}
+
+
+/* DARK DROPDOWNS */
+
+body.brewspot-dark .brewspot-dropdown .dropdown-menu,
+body.brewspot-dark .brewspot-account-menu {
+  background: #211c18;
+
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.brewspot-dark .brewspot-dropdown .dropdown-item,
+body.brewspot-dark .brewspot-account-menu .dropdown-item {
+  color: #eee5dc;
+}
+
+body.brewspot-dark .brewspot-dropdown .dropdown-item:hover,
+body.brewspot-dark .brewspot-account-menu .dropdown-item:hover {
+  background: #302820;
+
+  color: #e0b28b;
+}
+
+body.brewspot-dark .brewspot-account-menu .dropdown-header {
+  color: #e0b28b;
+}
+
+body.brewspot-dark .brewspot-dropdown .dropdown-divider,
+body.brewspot-dark .brewspot-account-menu .dropdown-divider {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+
+/* DARK OFFCANVAS */
+
+body.brewspot-dark .brewspot-offcanvas {
+  background: #171412;
+
+  color: #eee5dc;
+}
+
+body.brewspot-dark .brewspot-offcanvas .offcanvas-header {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+body.brewspot-dark .brewspot-mobile-brand strong {
+  color: #e0b28b;
+}
+
+body.brewspot-dark .brewspot-mobile-brand small,
+body.brewspot-dark .brewspot-mobile-location {
+  color: #a99789;
+}
+
+body.brewspot-dark .brewspot-mobile-close,
+body.brewspot-dark .brewspot-mobile-nav .nav-link,
+body.brewspot-dark .brewspot-mobile-actions button {
+  color: #eee5dc;
+}
+
+body.brewspot-dark .brewspot-mobile-nav .nav-link {
+  border-bottom-color: rgba(255, 255, 255, 0.07);
+}
+
+body.brewspot-dark .brewspot-mobile-nav .nav-link.active,
+body.brewspot-dark .brewspot-mobile-nav .nav-link:hover {
+  color: #e0b28b;
+}
+
+body.brewspot-dark .brewspot-mobile-actions button {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.brewspot-dark .brewspot-mobile-location {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+body.brewspot-dark .brewspot-mobile-location strong {
+  color: #eee5dc;
+}
+
+
+/* DARK MOBILE SEARCH */
+
+body.brewspot-dark .brewspot-mobile-search .input-group {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.brewspot-dark .brewspot-mobile-search .form-control {
+  color: #eee5dc;
+}
+
+body.brewspot-dark .brewspot-mobile-search .form-control::placeholder {
+  color: #a99789;
+}
+
+
+/* DARK MODALS */
+
+body.brewspot-dark .brewspot-search-modal .modal-content,
+body.brewspot-dark .brewspot-booking-modal .modal-content {
+  background: #211c18;
+
+  color: #eee5dc;
+}
+
+body.brewspot-dark .brewspot-search-modal .modal-header,
+body.brewspot-dark .brewspot-booking-modal .modal-header {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+body.brewspot-dark .brewspot-search-modal .modal-title,
+body.brewspot-dark .brewspot-booking-modal .modal-title {
+  color: #e0b28b;
+}
+
+body.brewspot-dark .brewspot-search-modal .form-control,
+body.brewspot-dark .brewspot-booking-modal .form-control,
+body.brewspot-dark .brewspot-booking-modal .form-select,
+body.brewspot-dark .brewspot-booking-modal textarea {
+  background: #171412;
+
+  border-color: rgba(255, 255, 255, 0.1);
+
+  color: #eee5dc;
+}
+
+body.brewspot-dark .brewspot-search-modal .form-control::placeholder,
+body.brewspot-dark .brewspot-booking-modal .form-control::placeholder,
+body.brewspot-dark .brewspot-booking-modal textarea::placeholder {
+  color: #9f8e80;
+}
+
+body.brewspot-dark .brewspot-booking-modal .form-label {
+  color: #eee5dc;
+}
+
+
+/* =========================================================
+   LARGE LAPTOP
+========================================================= */
+
+@media (max-width: 1199px) {
+  .brewspot-main-nav {
+    gap: 0;
+  }
+
+  .brewspot-nav-link,
+  .brewspot-dropdown > a {
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+  }
+
+  .brewspot-actions {
+    gap: 11px;
+
+    margin-left: 8px;
+  }
+
+  .brewspot-book-btn {
+    padding: 10px 12px;
+  }
+
+  .brewspot-book-btn span {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   HAMBURGER BELOW 992px
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .brewspot-navbar {
+    min-height: 68px;
+  }
+
+  .brewspot-navbar .container {
+    min-height: 68px;
+  }
+
+  .brewspot-navbar .navbar-collapse {
+    display: none !important;
+  }
+
+  .brewspot-mobile-toggle {
+    display: inline-flex !important;
+  }
+
+  .brewspot-actions {
+    display: none !important;
+  }
+
+  .brewspot-brand {
+    margin-right: 0;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+  .brewspot-offcanvas {
+    width: min(90vw, 390px) !important;
+  }
+
+  .brewspot-mobile-nav .nav-link {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 575.98px) {
+  .brewspot-brand {
+    gap: 8px;
+  }
+
+  .brewspot-logo {
+    font-size: 23px;
+  }
+
+  .brewspot-name {
+    font-size: 16px;
+
+    letter-spacing: 2px;
+  }
+
+  .brewspot-brand-text small {
+    font-size: 6px;
+
+    letter-spacing: 1px;
+  }
+
+  .brewspot-mobile-toggle {
+    font-size: 24px;
+  }
+
+  .brewspot-offcanvas {
+    width: 90vw !important;
+  }
+
+  .brewspot-offcanvas .offcanvas-header {
+    padding: 18px 16px;
+  }
+
+  .brewspot-offcanvas .offcanvas-body {
+    padding: 18px 16px;
+  }
+
+  .brewspot-mobile-nav .nav-link {
+    font-size: 13px;
+
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+
+  .brewspot-mobile-actions {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .brewspot-mobile-actions button {
+    font-size: 12px;
+
+    padding: 11px 8px;
+  }
+
+  .brewspot-mobile-book {
+    font-size: 12px;
+  }
+
+  .brewspot-search-modal .modal-body,
+  .brewspot-booking-modal .modal-body {
+    padding: 18px;
+  }
+
+  .brewspot-search-modal .modal-title,
+  .brewspot-booking-modal .modal-title {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .brewspot-brand-text small {
+    display: none;
+  }
+
+  .brewspot-name {
+    font-size: 15px;
+  }
+
+  .brewspot-mobile-toggle {
+    font-size: 22px;
+  }
+
+  .brewspot-offcanvas {
+    width: 94vw !important;
+  }
+
+  .brewspot-mobile-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .brewspot-popular-searches > div {
+    gap: 6px;
+  }
+}

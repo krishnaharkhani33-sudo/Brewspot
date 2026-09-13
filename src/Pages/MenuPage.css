@@ -1,0 +1,1223 @@
+/* =========================================================
+   BREWSPOT MENU PAGE
+   ========================================================= */
+
+.brewspot-new-menu-page {
+  width: 100%;
+  overflow: hidden;
+  background: #faf7f3;
+  color: #30251f;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+   ========================================================= */
+
+.brewspot-section-label {
+  display: inline-block;
+  color: #8a6241;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.brewspot-new-menu-hero {
+  position: relative;
+  min-height: 620px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 90px 25px;
+
+  background-image:
+    url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1800&q=90");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.brewspot-new-menu-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(25, 16, 11, 0.88) 0%,
+      rgba(25, 16, 11, 0.67) 45%,
+      rgba(25, 16, 11, 0.34) 100%
+    );
+}
+
+.brewspot-new-menu-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(1150px, 100%);
+  margin: auto;
+
+  color: #ffffff;
+}
+
+.brewspot-new-menu-eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+  margin-bottom: 22px;
+
+  color: #d6a15d;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.brewspot-new-menu-eyebrow svg {
+  font-size: 17px;
+}
+
+.brewspot-new-menu-hero h1 {
+  max-width: 750px;
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(48px, 6vw, 82px);
+  font-weight: 700;
+
+  line-height: 0.98;
+  letter-spacing: -3px;
+}
+
+.brewspot-new-menu-hero h1 span {
+  color: #d6a15d;
+}
+
+.brewspot-new-menu-hero-content > p {
+  max-width: 570px;
+  margin: 28px 0 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.brewspot-new-menu-hero-btn {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+  margin-top: 32px;
+
+  padding: 14px 23px;
+
+  border: 1px solid #d6a15d;
+  border-radius: 0;
+
+  background: #d6a15d;
+  color: #30251f;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.brewspot-new-menu-hero-btn:hover {
+  background: transparent;
+  color: #ffffff;
+}
+
+.brewspot-new-menu-hero-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.brewspot-new-menu-hero-btn:hover svg {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   CHEF PICKS
+   ========================================================= */
+
+.brewspot-chef-section {
+  padding: 115px 25px;
+  background: #faf7f3;
+}
+
+.brewspot-chef-header {
+  width: min(760px, 100%);
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.brewspot-chef-header h2 {
+  margin: 10px 0 0;
+
+  color: #30251f;
+
+  font-size: clamp(35px, 4vw, 52px);
+  font-weight: 700;
+
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+}
+
+.brewspot-chef-header h2 span {
+  color: #8a6241;
+}
+
+.brewspot-chef-header p {
+  max-width: 590px;
+  margin: 20px auto 0;
+
+  color: #756960;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.brewspot-chef-grid {
+  width: min(1200px, 100%);
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.brewspot-chef-card {
+  overflow: hidden;
+
+  border: 1px solid rgba(48, 37, 31, 0.08);
+
+  background: #ffffff;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.brewspot-chef-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 20px 45px rgba(48, 37, 31, 0.13);
+}
+
+.brewspot-chef-image {
+  position: relative;
+  height: 310px;
+  overflow: hidden;
+}
+
+.brewspot-chef-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.brewspot-chef-card:hover .brewspot-chef-image img {
+  transform: scale(1.07);
+}
+
+.brewspot-chef-tag {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+
+  padding: 7px 10px;
+
+  background: #30251f;
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.brewspot-chef-content {
+  padding: 25px;
+}
+
+.brewspot-chef-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  color: #a06d35;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.brewspot-chef-content h3 {
+  margin: 10px 0 8px;
+
+  color: #30251f;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.brewspot-chef-content p {
+  margin: 0;
+
+  color: #756960;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.brewspot-chef-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+  margin-top: 22px;
+}
+
+.brewspot-chef-bottom strong {
+  color: #30251f;
+  font-size: 20px;
+}
+
+.brewspot-chef-bottom button {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+  padding: 10px 15px;
+
+  border: 1px solid #30251f;
+  border-radius: 0;
+
+  background: transparent;
+  color: #30251f;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.brewspot-chef-bottom button:hover {
+  background: #30251f;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   COLLECTIONS
+   4 SMALL BOXES - 2 x 2
+   ========================================================= */
+
+.brewspot-menu-collections {
+  padding: 115px 25px;
+  background: #f3eee8;
+}
+
+.brewspot-collections-header {
+  width: min(780px, 100%);
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.brewspot-collections-header h2 {
+  margin: 12px 0 0;
+
+  color: #30251f;
+
+  font-size: clamp(38px, 4.5vw, 56px);
+  font-weight: 700;
+
+  line-height: 1.05;
+  letter-spacing: -1.8px;
+}
+
+.brewspot-collections-header h2 span {
+  color: #8a6241;
+}
+
+.brewspot-collections-header p {
+  max-width: 610px;
+  margin: 20px auto 0;
+
+  color: #756960;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   2 x 2 GRID
+   ========================================================= */
+
+.brewspot-collections-list {
+  width: min(1250px, 100%);
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 22px;
+}
+
+
+/* =========================================================
+   SMALL IMAGE BOX
+   ========================================================= */
+
+.brewspot-collection-card {
+  position: relative;
+
+  width: 100%;
+  height: 390px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #30251f;
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   IMAGE FILLS WHOLE BOX
+   ========================================================= */
+
+.brewspot-collection-card img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.7s ease;
+}
+
+.brewspot-collection-card:hover img {
+  transform: scale(1.07);
+}
+
+
+/* =========================================================
+   IMAGE DARK OVERLAY
+   ========================================================= */
+
+.brewspot-collection-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(20, 12, 7, 0.88) 0%,
+      rgba(20, 12, 7, 0.68) 45%,
+      rgba(20, 12, 7, 0.18) 100%
+    );
+}
+
+.brewspot-collection-card:hover
+.brewspot-collection-overlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(20, 12, 7, 0.92) 0%,
+      rgba(20, 12, 7, 0.72) 45%,
+      rgba(20, 12, 7, 0.22) 100%
+    );
+}
+
+
+/* =========================================================
+   TEXT OVER IMAGE
+   ========================================================= */
+
+.brewspot-collection-content {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  z-index: 2;
+
+  width: 68%;
+  height: 100%;
+
+  padding: 42px 38px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   NUMBER + LINE
+   ========================================================= */
+
+.brewspot-collection-top {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 30px;
+}
+
+.brewspot-collection-number {
+  color: #f1d5a6;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 52px;
+  font-weight: 500;
+
+  line-height: 0.9;
+}
+
+.brewspot-collection-line {
+  width: 90px;
+  height: 2px;
+
+  background: #e2bc7c;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.brewspot-collection-content h3 {
+  margin: 0 0 15px;
+
+  color: #ffffff;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(32px, 3.2vw, 48px);
+
+  font-weight: 500;
+
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.brewspot-collection-content p {
+  max-width: 360px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   EXPLORE COLLECTION BUTTON
+   ========================================================= */
+
+.brewspot-collection-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+
+  gap: 12px;
+
+  margin-top: 22px;
+
+  padding: 11px 18px;
+
+  border: 2px solid #d6a15d;
+  border-radius: 50px;
+
+  background: rgba(30, 18, 10, 0.25);
+
+  color: #f4d5a6;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(3px);
+
+  transition: all 0.3s ease;
+}
+
+.brewspot-collection-btn svg {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.brewspot-collection-btn:hover {
+  background: #d6a15d;
+  border-color: #d6a15d;
+
+  color: #30251f;
+
+  transform: translateY(-2px);
+}
+
+.brewspot-collection-btn:hover svg {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   POPULAR
+   ========================================================= */
+
+.brewspot-popular-section {
+  padding: 115px 25px;
+  background: #faf7f3;
+}
+
+.brewspot-popular-header {
+  width: min(1200px, 100%);
+  margin: 0 auto 50px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+.brewspot-popular-header h2 {
+  margin: 10px 0 0;
+
+  color: #30251f;
+
+  font-size: clamp(35px, 4vw, 50px);
+  font-weight: 700;
+
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+}
+
+.brewspot-popular-header h2 span {
+  color: #8a6241;
+}
+
+.brewspot-view-menu-btn {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 12px 18px;
+
+  border: 1px solid #30251f;
+  border-radius: 0;
+
+  background: transparent;
+  color: #30251f;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.brewspot-view-menu-btn:hover {
+  background: #30251f;
+  color: #ffffff;
+}
+
+.brewspot-popular-grid {
+  width: min(1200px, 100%);
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+.brewspot-popular-card {
+  overflow: hidden;
+
+  border: 1px solid rgba(48, 37, 31, 0.08);
+
+  background: #ffffff;
+
+  transition: all 0.35s ease;
+}
+
+.brewspot-popular-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 18px 40px rgba(48, 37, 31, 0.11);
+}
+
+.brewspot-popular-image {
+  height: 245px;
+  overflow: hidden;
+}
+
+.brewspot-popular-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.brewspot-popular-card:hover
+.brewspot-popular-image img {
+  transform: scale(1.07);
+}
+
+.brewspot-popular-content {
+  padding: 23px;
+}
+
+.brewspot-popular-content > span {
+  color: #9a7250;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+}
+
+.brewspot-popular-content h3 {
+  margin: 8px 0 20px;
+
+  color: #30251f;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.brewspot-popular-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brewspot-popular-rating {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  color: #7d6045;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.brewspot-popular-bottom strong {
+  color: #30251f;
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.brewspot-menu-cta {
+  position: relative;
+
+  padding: 110px 25px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #30251f 0%,
+      #432f22 100%
+    );
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+.brewspot-menu-cta-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 700px;
+  margin: auto;
+}
+
+.brewspot-menu-cta-content > svg {
+  margin-bottom: 17px;
+
+  color: #d6a15d;
+  font-size: 28px;
+}
+
+.brewspot-menu-cta-content > span {
+  display: block;
+
+  color: #d6a15d;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2.4px;
+}
+
+.brewspot-menu-cta-content h2 {
+  margin: 15px 0 18px;
+
+  color: #ffffff;
+
+  font-size: clamp(42px, 6vw, 70px);
+
+  font-weight: 700;
+
+  line-height: 0.98;
+  letter-spacing: -2px;
+}
+
+.brewspot-menu-cta-content h2 em {
+  color: #d6a15d;
+  font-style: normal;
+}
+
+.brewspot-menu-cta-content p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.brewspot-menu-cta-btn {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 28px;
+
+  padding: 14px 22px;
+
+  border: 1px solid #d6a15d;
+  border-radius: 0;
+
+  background: #d6a15d;
+  color: #30251f;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.brewspot-menu-cta-btn:hover {
+  background: transparent;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+body.brewspot-dark .brewspot-new-menu-page {
+  background: #17120f;
+  color: #ffffff;
+}
+
+body.brewspot-dark .brewspot-chef-section {
+  background: #17120f;
+}
+
+body.brewspot-dark .brewspot-chef-header h2,
+body.brewspot-dark .brewspot-collections-header h2,
+body.brewspot-dark .brewspot-popular-header h2 {
+  color: #ffffff;
+}
+
+body.brewspot-dark .brewspot-chef-header h2 span,
+body.brewspot-dark .brewspot-collections-header h2 span,
+body.brewspot-dark .brewspot-popular-header h2 span {
+  color: #d6a15d;
+}
+
+body.brewspot-dark .brewspot-chef-header p,
+body.brewspot-dark .brewspot-collections-header p {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+body.brewspot-dark .brewspot-chef-card {
+  border-color: rgba(255, 255, 255, 0.07);
+  background: #211a16;
+}
+
+body.brewspot-dark .brewspot-chef-content h3,
+body.brewspot-dark .brewspot-chef-bottom strong {
+  color: #ffffff;
+}
+
+body.brewspot-dark .brewspot-chef-content p {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+body.brewspot-dark .brewspot-chef-bottom button {
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #ffffff;
+}
+
+body.brewspot-dark .brewspot-menu-collections {
+  background: #211a16;
+}
+
+body.brewspot-dark .brewspot-popular-section {
+  background: #17120f;
+}
+
+body.brewspot-dark .brewspot-view-menu-btn {
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #ffffff;
+}
+
+body.brewspot-dark .brewspot-view-menu-btn:hover {
+  background: #d6a15d;
+  border-color: #d6a15d;
+  color: #30251f;
+}
+
+body.brewspot-dark .brewspot-popular-card {
+  border-color: rgba(255, 255, 255, 0.07);
+  background: #211a16;
+}
+
+body.brewspot-dark .brewspot-popular-content h3,
+body.brewspot-dark .brewspot-popular-bottom strong {
+  color: #ffffff;
+}
+
+body.brewspot-dark .brewspot-popular-content > span {
+  color: #d6a15d;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .brewspot-chef-grid,
+  .brewspot-popular-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brewspot-chef-card:last-child,
+  .brewspot-popular-card:last-child {
+    grid-column: 1 / -1;
+
+    max-width: 500px;
+    width: 100%;
+
+    margin: auto;
+  }
+
+  .brewspot-collection-card {
+    height: 360px;
+  }
+
+  .brewspot-collection-content {
+    width: 70%;
+    padding: 35px 30px;
+  }
+
+  .brewspot-collection-number {
+    font-size: 46px;
+  }
+
+  .brewspot-collection-line {
+    width: 70px;
+  }
+
+  .brewspot-collection-content h3 {
+    font-size: 38px;
+  }
+
+  .brewspot-collection-content p {
+    font-size: 12px;
+  }
+
+  .brewspot-collection-btn {
+    padding: 10px 16px;
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .brewspot-new-menu-hero {
+    min-height: 500px;
+    padding: 65px 18px;
+  }
+
+  .brewspot-new-menu-hero-content {
+    text-align: center;
+  }
+
+  .brewspot-new-menu-eyebrow {
+    justify-content: center;
+  }
+
+  .brewspot-new-menu-hero h1 {
+    font-size: clamp(38px, 12vw, 53px);
+    letter-spacing: -2px;
+  }
+
+  .brewspot-new-menu-hero-content > p {
+    margin-right: auto;
+    margin-left: auto;
+
+    font-size: 13px;
+  }
+
+  .brewspot-chef-section,
+  .brewspot-menu-collections,
+  .brewspot-popular-section {
+    padding: 75px 16px;
+  }
+
+  .brewspot-chef-grid,
+  .brewspot-popular-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brewspot-chef-card:last-child,
+  .brewspot-popular-card:last-child {
+    grid-column: auto;
+    max-width: none;
+  }
+
+
+  /* =====================================================
+     COLLECTIONS MOBILE = 1 COLUMN
+     ===================================================== */
+
+  .brewspot-collections-list {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .brewspot-collection-card {
+    height: 390px;
+    border-radius: 18px;
+  }
+
+  .brewspot-collection-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(20, 12, 7, 0.12) 0%,
+        rgba(20, 12, 7, 0.50) 42%,
+        rgba(20, 12, 7, 0.94) 100%
+      );
+  }
+
+  .brewspot-collection-content {
+    top: auto;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    padding: 28px 23px 25px;
+
+    justify-content: flex-end;
+  }
+
+  .brewspot-collection-top {
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .brewspot-collection-number {
+    font-size: 48px;
+  }
+
+  .brewspot-collection-line {
+    width: 85px;
+  }
+
+  .brewspot-collection-content h3 {
+    font-size: 36px;
+  }
+
+  .brewspot-collection-content p {
+    max-width: 100%;
+    font-size: 13px;
+  }
+
+  .brewspot-collection-btn {
+    margin-top: 18px;
+
+    padding: 11px 17px;
+
+    font-size: 12px;
+  }
+
+
+  .brewspot-popular-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .brewspot-popular-image {
+    height: 235px;
+  }
+
+  .brewspot-menu-cta {
+    padding: 85px 20px;
+  }
+
+  .brewspot-menu-cta-content h2 {
+    font-size: 45px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+  .brewspot-collection-card {
+    height: 360px;
+  }
+
+  .brewspot-collection-content {
+    padding: 24px 20px 22px;
+  }
+
+  .brewspot-collection-top {
+    margin-bottom: 17px;
+  }
+
+  .brewspot-collection-number {
+    font-size: 43px;
+  }
+
+  .brewspot-collection-line {
+    width: 65px;
+  }
+
+  .brewspot-collection-content h3 {
+    font-size: 32px;
+  }
+
+  .brewspot-collection-content p {
+    font-size: 12px;
+  }
+
+  .brewspot-collection-btn {
+    padding: 10px 15px;
+    gap: 10px;
+    font-size: 11px;
+  }
+
+  .brewspot-collection-btn svg {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .brewspot-collection-card {
+    height: 335px;
+  }
+
+  .brewspot-collection-number {
+    font-size: 39px;
+  }
+
+  .brewspot-collection-line {
+    width: 50px;
+  }
+
+  .brewspot-collection-content h3 {
+    font-size: 29px;
+  }
+
+  .brewspot-collection-content p {
+    font-size: 11px;
+  }
+
+  .brewspot-collection-btn {
+    padding: 9px 13px;
+    font-size: 10px;
+  }
+}

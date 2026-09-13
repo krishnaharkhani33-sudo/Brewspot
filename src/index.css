@@ -1,13 +1,37 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  scroll-behavior: smooth;
+  background-color: #f7f1e8;
 }
+
+body {
+  margin: 0;
+  background-color: #f7f1e8;
+  color: #2b1d16;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: #f7f1e8;
+}
+
+
+/* =========================================
+   BREWSPOT GLOBAL DARK MODE COLORS
+========================================= */
+
+:root {
+  --brew-dark-bg: #1c1713;
+  --brew-dark-card: #261f19;
+  --brew-dark-text: #f5eee7;
+  --brew-dark-muted: #b9aaa0;
+  --brew-dark-border: rgba(255, 255, 255, 0.10);
+  --brew-accent: #d6a15d;
+}
+

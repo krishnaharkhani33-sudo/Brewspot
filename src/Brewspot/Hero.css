@@ -1,0 +1,806 @@
+/* =========================
+   BREWSPOT HERO
+========================= */
+
+.brewspot-hero {
+  position: relative;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(250, 247, 243, 0.96) 0%,
+      rgba(250, 247, 243, 0.88) 48%,
+      rgba(250, 247, 243, 0.62) 100%
+    ),
+    url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=2000&q=90");
+
+  background-size: cover;
+  background-position: center;
+
+  color: #30251f;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease;
+}
+
+/* =========================
+   HERO OVERLAY
+========================= */
+
+.brewspot-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 75% 50%,
+      rgba(86, 57, 33, 0.08),
+      transparent 35%
+    );
+
+  pointer-events: none;
+}
+
+/* =========================
+   HERO ROW
+========================= */
+
+.brewspot-hero-row {
+  position: relative;
+  z-index: 2;
+  min-height: calc(100vh - 70px);
+  padding: 80px 0;
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.brewspot-hero-content {
+  max-width: 700px;
+}
+
+/* =========================
+   LABEL
+========================= */
+
+.brewspot-hero-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+
+  color: #80583e;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  transition: color 0.3s ease;
+}
+
+.brewspot-hero-label svg {
+  font-size: 18px;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.brewspot-hero h1 {
+  margin: 0;
+
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: 1.03;
+  font-weight: 800;
+  letter-spacing: -2px;
+
+  color: #30251f;
+
+  transition: color 0.3s ease;
+}
+
+.brewspot-hero h1 span {
+  color: #80583e;
+
+  transition: color 0.3s ease;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.brewspot-hero-content > p {
+  max-width: 570px;
+  margin: 28px 0 34px;
+
+  color: #665850;
+
+  font-size: 17px;
+  line-height: 1.8;
+
+  transition: color 0.3s ease;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.brewspot-hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.brewspot-primary-btn,
+.brewspot-secondary-btn {
+  min-height: 52px;
+  padding: 0 24px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* =========================
+   PRIMARY BUTTON
+========================= */
+
+.brewspot-primary-btn {
+  background: #563921;
+  color: #ffffff;
+  border: 1px solid #563921;
+}
+
+.brewspot-primary-btn:hover {
+  background: #6d4a2d;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   SECONDARY BUTTON
+========================= */
+
+.brewspot-secondary-btn {
+  background: transparent;
+  color: #563921;
+  border: 1px solid rgba(86, 57, 33, 0.40);
+}
+
+.brewspot-secondary-btn:hover {
+  background: #563921;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.brewspot-hero-features {
+  margin-top: 55px;
+
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.brewspot-hero-features div:not(.brewspot-feature-line) {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.brewspot-hero-features strong {
+  color: #3e3028;
+  font-size: 13px;
+  font-weight: 700;
+
+  transition: color 0.3s ease;
+}
+
+.brewspot-hero-features span {
+  color: #796b63;
+  font-size: 11px;
+
+  transition: color 0.3s ease;
+}
+
+.brewspot-feature-line {
+  width: 1px;
+  height: 35px;
+
+  background: rgba(86, 57, 33, 0.22);
+
+  transition: background 0.3s ease;
+}
+
+/* =========================
+   HERO RIGHT CARD
+========================= */
+
+.brewspot-hero-card {
+  position: relative;
+
+  min-height: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   COFFEE CIRCLE
+   LIGHT MODE
+========================= */
+
+.brewspot-coffee-circle {
+  width: 360px;
+  height: 360px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(86, 57, 33, 0.40);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(86, 57, 33, 0.20),
+      rgba(86, 57, 33, 0.05)
+    );
+
+  box-shadow:
+    0 0 80px rgba(86, 57, 33, 0.14),
+    inset 0 0 60px rgba(86, 57, 33, 0.08);
+
+  animation: brewspot-float 5s ease-in-out infinite;
+
+  transition:
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* =========================
+   LIGHT MODE CIRCLE HOVER
+   ONLY COLOR CHANGE
+========================= */
+
+body:not(.brewspot-dark) .brewspot-coffee-circle:hover {
+  border-color: rgba(86, 57, 33, 0.75);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(86, 57, 33, 0.34),
+      rgba(86, 57, 33, 0.10)
+    );
+
+  box-shadow:
+    0 0 100px rgba(86, 57, 33, 0.25),
+    inset 0 0 70px rgba(86, 57, 33, 0.14);
+}
+
+/* =========================
+   COFFEE CUP
+========================= */
+
+.brewspot-coffee-cup {
+  width: 230px;
+  height: 230px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(86, 57, 33, 0.25),
+      rgba(86, 57, 33, 0.05)
+    );
+
+  font-size: 110px;
+
+  filter:
+    drop-shadow(
+      0 25px 30px rgba(86, 57, 33, 0.20)
+    );
+
+  transition:
+    background 0.35s ease,
+    filter 0.35s ease;
+}
+
+/* =========================
+   FLOATING CARD
+========================= */
+
+.brewspot-floating-card {
+  position: absolute;
+
+  right: 0;
+  bottom: 45px;
+
+  min-width: 205px;
+  padding: 18px 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  color: #3d3028;
+
+  border-left: 2px solid #80583e;
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 20px 50px rgba(70, 50, 35, 0.15);
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.brewspot-floating-card span {
+  color: #80583e;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.brewspot-floating-card strong {
+  color: #3d3028;
+  font-size: 17px;
+}
+
+.brewspot-floating-card small {
+  color: #796b63;
+  font-size: 11px;
+}
+
+/* =========================
+   SCROLL
+========================= */
+
+.brewspot-scroll {
+  position: absolute;
+
+  bottom: 25px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 7px;
+
+  z-index: 3;
+}
+
+.brewspot-scroll span {
+  width: 1px;
+  height: 35px;
+
+  background: rgba(48, 37, 31, 0.45);
+}
+
+.brewspot-scroll p {
+  margin: 0;
+
+  color: rgba(48, 37, 31, 0.55);
+
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+body.brewspot-dark .brewspot-hero {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(23, 20, 18, 0.97) 0%,
+      rgba(23, 20, 18, 0.91) 48%,
+      rgba(23, 20, 18, 0.66) 100%
+    ),
+    url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=2000&q=90");
+
+  background-size: cover;
+  background-position: center;
+
+  color: #ffffff;
+}
+
+/* =========================
+   DARK HERO OVERLAY
+   WARM COFFEE COLOR
+========================= */
+
+body.brewspot-dark .brewspot-hero-overlay {
+  background:
+    radial-gradient(
+      circle at 75% 50%,
+      rgba(214, 161, 93, 0.14),
+      rgba(86, 57, 33, 0.08) 28%,
+      transparent 42%
+    );
+}
+
+body.brewspot-dark .brewspot-hero-label {
+  color: #d6a15d;
+}
+
+body.brewspot-dark .brewspot-hero h1 {
+  color: #ffffff;
+}
+
+body.brewspot-dark .brewspot-hero h1 span {
+  color: #d6a15d;
+}
+
+body.brewspot-dark .brewspot-hero-content > p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* =========================
+   DARK PRIMARY BUTTON
+========================= */
+
+body.brewspot-dark .brewspot-primary-btn {
+  background: #d6a15d;
+  border-color: #d6a15d;
+  color: #171412;
+}
+
+body.brewspot-dark .brewspot-primary-btn:hover {
+  background: #e0b274;
+  border-color: #e0b274;
+}
+
+/* =========================
+   DARK SECONDARY BUTTON
+========================= */
+
+body.brewspot-dark .brewspot-secondary-btn {
+  color: #ffffff;
+  border-color: rgba(214, 161, 93, 0.45);
+}
+
+body.brewspot-dark .brewspot-secondary-btn:hover {
+  background: #d6a15d;
+  border-color: #d6a15d;
+  color: #171412;
+}
+
+/* =========================
+   DARK FEATURES
+========================= */
+
+body.brewspot-dark .brewspot-hero-features strong {
+  color: #ffffff;
+}
+
+body.brewspot-dark .brewspot-hero-features span {
+  color: rgba(255, 255, 255, 0.50);
+}
+
+body.brewspot-dark .brewspot-feature-line {
+  background: rgba(214, 161, 93, 0.25);
+}
+
+/* =========================
+   DARK MODE CIRCLE
+========================= */
+
+body.brewspot-dark .brewspot-coffee-circle {
+  border-color: rgba(214, 161, 93, 0.35);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(214, 161, 93, 0.13),
+      rgba(214, 161, 93, 0.04)
+    );
+
+  box-shadow:
+    0 0 80px rgba(214, 161, 93, 0.12),
+    inset 0 0 60px rgba(214, 161, 93, 0.06);
+}
+
+/* =========================
+   DARK CUP
+========================= */
+
+body.brewspot-dark .brewspot-coffee-cup {
+  background:
+    radial-gradient(
+      circle,
+      rgba(214, 161, 93, 0.28),
+      rgba(214, 161, 93, 0.05)
+    );
+
+  filter:
+    drop-shadow(
+      0 25px 30px rgba(0, 0, 0, 0.40)
+    );
+}
+
+/* =========================
+   DARK FLOATING CARD
+========================= */
+
+body.brewspot-dark .brewspot-floating-card {
+  background: rgba(33, 28, 24, 0.94);
+
+  color: #f4eee7;
+
+  border-left-color: #d6a15d;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+body.brewspot-dark .brewspot-floating-card span {
+  color: #d6a15d;
+}
+
+body.brewspot-dark .brewspot-floating-card strong {
+  color: #f4eee7;
+}
+
+body.brewspot-dark .brewspot-floating-card small {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* =========================
+   DARK SCROLL
+========================= */
+
+body.brewspot-dark .brewspot-scroll span {
+  background: rgba(214, 161, 93, 0.60);
+}
+
+body.brewspot-dark .brewspot-scroll p {
+  color: rgba(214, 161, 93, 0.60);
+}
+
+/* =====================================================
+   FLOAT ANIMATION
+===================================================== */
+
+@keyframes brewspot-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991.98px) {
+  .brewspot-hero {
+    min-height: auto;
+  }
+
+  .brewspot-hero-row {
+    min-height: auto;
+    padding: 90px 25px 100px;
+  }
+
+  .brewspot-hero-content {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .brewspot-hero-label {
+    justify-content: center;
+  }
+
+  .brewspot-hero-content > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .brewspot-hero-buttons {
+    justify-content: center;
+  }
+
+  .brewspot-hero-features {
+    justify-content: center;
+  }
+
+  .brewspot-hero-card {
+    min-height: 400px;
+    margin-top: 30px;
+  }
+
+  .brewspot-floating-card {
+    right: 12%;
+  }
+
+  .brewspot-scroll {
+    display: none;
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 575.98px) {
+  .brewspot-hero-row {
+    padding: 65px 18px 70px;
+  }
+
+  .brewspot-hero-label {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+  }
+
+  .brewspot-hero h1 {
+    font-size: 44px;
+    letter-spacing: -1.5px;
+  }
+
+  .brewspot-hero-content > p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: 22px;
+  }
+
+  .brewspot-hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .brewspot-primary-btn,
+  .brewspot-secondary-btn {
+    width: 100%;
+  }
+
+  .brewspot-hero-features {
+    gap: 12px;
+    margin-top: 40px;
+  }
+
+  .brewspot-hero-features strong {
+    font-size: 10px;
+  }
+
+  .brewspot-hero-features span {
+    font-size: 9px;
+  }
+
+  .brewspot-feature-line {
+    height: 30px;
+  }
+
+  .brewspot-hero-card {
+    min-height: 300px;
+    margin-top: 20px;
+  }
+
+  .brewspot-coffee-circle {
+    width: 250px;
+    height: 250px;
+  }
+
+  .brewspot-coffee-cup {
+    width: 165px;
+    height: 165px;
+    font-size: 75px;
+  }
+
+  .brewspot-floating-card {
+    right: 0;
+    bottom: 0;
+    min-width: 175px;
+    padding: 14px;
+  }
+
+  .brewspot-floating-card strong {
+    font-size: 14px;
+  }
+}
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+  .brewspot-hero-row {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .brewspot-hero h1 {
+    font-size: 37px;
+  }
+
+  .brewspot-hero-label {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .brewspot-hero-content > p {
+    font-size: 13px;
+  }
+
+  .brewspot-coffee-circle {
+    width: 220px;
+    height: 220px;
+  }
+
+  .brewspot-coffee-cup {
+    width: 145px;
+    height: 145px;
+    font-size: 65px;
+  }
+
+  .brewspot-floating-card {
+    min-width: 165px;
+    padding: 12px;
+  }
+}
+
+/* =====================================================
+   LARGE DESKTOP
+===================================================== */
+
+@media (min-width: 1400px) {
+  .brewspot-hero-row {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  .brewspot-hero h1 {
+    font-size: 82px;
+  }
+
+  .brewspot-hero-content > p {
+    font-size: 18px;
+  }
+}
